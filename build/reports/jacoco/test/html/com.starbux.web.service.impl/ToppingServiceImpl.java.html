@@ -8,6 +8,7 @@ import com.starbux.web.mapper.IToppingMapper;
 import com.starbux.web.repository.IToppingRepository;
 import com.starbux.web.service.IToppingService;
 
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-<span class="fc" id="L18">public class ToppingServiceImpl implements IToppingService&lt;ToppingReqDto, ToppingResDto&gt; {</span>
+<span class="fc" id="L19">public class ToppingServiceImpl implements IToppingService&lt;ToppingReqDto, ToppingResDto&gt; {</span>
 
 	@Autowired
 	private IToppingRepository toppingRepository;
@@ -24,66 +25,72 @@ import java.util.Optional;
 	private IToppingMapper toppingMapper;
 
 	@Override
-	public ToppingResDto create(ToppingReqDto toppingReqDto) {
-<span class="fc" id="L28">		Topping topping = transformToEntity(toppingReqDto);</span>
-<span class="fc" id="L29">		Topping savedTopping = toppingRepository.save(topping);</span>
-<span class="fc" id="L30">		return transformToResponse(savedTopping);</span>
+	public Optional&lt;ToppingResDto&gt; create(ToppingReqDto toppingReqDto) {
+<span class="fc" id="L29">		Topping topping = transformToEntity(toppingReqDto);</span>
+<span class="fc" id="L30">		Topping savedTopping = toppingRepository.save(topping);</span>
+<span class="fc" id="L31">		return Optional.ofNullable(transformToResponse(savedTopping));</span>
 	}
 
 	@Override
-	public ToppingResDto update(ToppingReqDto toppingReqDto) {
-<span class="fc" id="L35">		Topping topping = transformToEntity(toppingReqDto);</span>
-<span class="fc" id="L36">		Topping updatedTopping = toppingRepository.save(topping);</span>
-<span class="fc" id="L37">		return transformToResponse(updatedTopping);</span>
+	public Optional&lt;ToppingResDto&gt; update(ToppingReqDto toppingReqDto) {
+<span class="fc" id="L36">		Topping topping = transformToEntity(toppingReqDto);</span>
+<span class="fc" id="L37">		Topping updatedTopping = toppingRepository.save(topping);</span>
+<span class="fc" id="L38">		return Optional.ofNullable(transformToResponse(updatedTopping));</span>
 	}
 
 	@Override
-	public ToppingResDto get(Long id) {
-<span class="fc" id="L42">		Optional&lt;Topping&gt; topping = toppingRepository.findById(id);</span>
-<span class="pc bpc" id="L43" title="1 of 2 branches missed.">		if (topping.isPresent()) {</span>
-<span class="fc" id="L44">			return transformToResponse(topping.get());</span>
+	public Optional&lt;ToppingResDto&gt; get(Long id) {
+<span class="fc" id="L43">		Optional&lt;Topping&gt; topping = toppingRepository.findById(id);</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">		if (topping.isPresent()) {</span>
+<span class="fc" id="L45">			return Optional.of(transformToResponse(topping.get()));</span>
 		}
-<span class="nc" id="L46">		throw new NotFoundException(</span>
-<span class="nc" id="L47">				String.format(&quot;Topping not found for given id {}&quot;, id));</span>
+<span class="fc" id="L47">		return Optional.empty();</span>
 	}
 
 	@Override
-	public List&lt;ToppingResDto&gt; getAll() {
-<span class="fc" id="L52">		return transformToResponse(toppingRepository.findAll());</span>
-	}
-
-	@Override
-	public ToppingResDto enable(Long id) {
-<span class="fc" id="L57">		return toggle(id, true);</span>
-	}
-
-	private ToppingResDto toggle(Long id, boolean flag) {
-<span class="fc" id="L61">		Optional&lt;Topping&gt; toppingOptional = toppingRepository.findById(id);</span>
-<span class="pc bpc" id="L62" title="1 of 2 branches missed.">		if (toppingOptional.isPresent()) {</span>
-<span class="fc" id="L63">			Topping topping = toppingOptional.get();</span>
-<span class="fc" id="L64">			topping.setEnabled(flag);</span>
-<span class="fc" id="L65">			topping = toppingRepository.save(topping);</span>
-<span class="fc" id="L66">			return transformToResponse(topping);</span>
+	public Optional&lt;List&lt;ToppingResDto&gt;&gt; getAll() {
+		try {
+<span class="fc" id="L53">			List&lt;Topping&gt; toppings = toppingRepository.findAll();</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">			if (CollectionUtils.isNotEmpty(toppings)) {</span>
+<span class="fc" id="L55">				return Optional.of(transformToResponse(toppings));</span>
+			}
+<span class="fc" id="L57">			return Optional.empty();</span>
+<span class="nc" id="L58">		} catch (Exception ex) {</span>
+<span class="nc" id="L59">			throw new NotFoundException(&quot;Not Found&quot;);</span>
 		}
-<span class="nc" id="L68">		throw new NotFoundException(</span>
-<span class="nc" id="L69">				String.format(&quot;Topping not found for given id {}&quot;, id));</span>
 	}
 
 	@Override
-	public ToppingResDto disable(Long id) {
-<span class="fc" id="L74">		return toggle(id, false);</span>
+	public Optional&lt;ToppingResDto&gt; enable(Long id) {
+<span class="fc" id="L65">		return toggle(id, true);</span>
+	}
+
+	private Optional&lt;ToppingResDto&gt; toggle(Long id, boolean flag) {
+<span class="fc" id="L69">		Optional&lt;Topping&gt; toppingOptional = toppingRepository.findById(id);</span>
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">		if (toppingOptional.isPresent()) {</span>
+<span class="fc" id="L71">			Topping topping = toppingOptional.get();</span>
+<span class="fc" id="L72">			topping.setEnabled(flag);</span>
+<span class="fc" id="L73">			topping = toppingRepository.save(topping);</span>
+<span class="fc" id="L74">			return Optional.ofNullable(transformToResponse(topping));</span>
+		}
+<span class="nc" id="L76">		return Optional.empty();</span>
+	}
+
+	@Override
+	public Optional&lt;ToppingResDto&gt; disable(Long id) {
+<span class="fc" id="L81">		return toggle(id, false);</span>
 	}
 
 	private ToppingResDto transformToResponse(Topping topping) {
-<span class="fc" id="L78">		return toppingMapper.entityToResponseDto(topping);</span>
+<span class="fc" id="L85">		return toppingMapper.entityToResponseDto(topping);</span>
 	}
 
 	private Topping transformToEntity(ToppingReqDto toppingReq) {
-<span class="fc" id="L82">		return toppingMapper.requestDtoToEntity(toppingReq);</span>
+<span class="fc" id="L89">		return toppingMapper.requestDtoToEntity(toppingReq);</span>
 	}
 
 	private List&lt;ToppingResDto&gt; transformToResponse(List&lt;Topping&gt; toppings) {
-<span class="fc" id="L86">		return toppingMapper.entitiesToResponseDtoList(toppings);</span>
+<span class="fc" id="L93">		return toppingMapper.entitiesToResponseDtoList(toppings);</span>
 	}
 
 }

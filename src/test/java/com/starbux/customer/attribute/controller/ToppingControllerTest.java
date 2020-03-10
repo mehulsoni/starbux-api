@@ -62,6 +62,20 @@ class ToppingControllerTest {
 			"/data/sql/initial_setup.sql",
 			"/data/sql/initial_data.sql"
 	})
+	void getTopping_byInvalidId_throwException() throws Exception {
+		MvcResult mvcResult =
+				mockMvc.perform(
+						get("/v1/topping/{id}",
+								10))
+						.andExpect(status().isNotFound()).andReturn();
+	}
+
+	@Test
+	@Sql(scripts = {
+			"/data/sql/cleanup.sql",
+			"/data/sql/initial_setup.sql",
+			"/data/sql/initial_data.sql"
+	})
 	void get_All_Topping() throws Exception {
 		MvcResult mvcResult =
 				mockMvc.perform(
@@ -74,6 +88,18 @@ class ToppingControllerTest {
 
 		assertEquals(4, toppingResDto.size());
 	}
+
+	@Test
+	@Sql(scripts = {
+			"/data/sql/cleanup.sql",
+			"/data/sql/initial_setup.sql"
+	})
+	void get_All_Topping_WhenNoData_throwException() throws Exception {
+		mockMvc.perform(
+				get("/v1/topping/"))
+				.andExpect(status().isNotFound()).andReturn();
+	}
+
 
 	@WithMockUser(roles = {"ADMIN"})
 	@Test
@@ -99,6 +125,26 @@ class ToppingControllerTest {
 
 		assertEquals(1, responseDto.getId());
 	}
+
+
+	@WithMockUser(roles = {"ADMIN"})
+	@Test
+	@Sql(scripts = {
+			"/data/sql/cleanup.sql",
+			"/data/sql/initial_setup.sql"
+	})
+	void create_NewTopping_withInvalidData_throwException() throws Exception {
+		ToppingReqDto toppingReqDto = new ToppingReqDto();
+		toppingReqDto.setCode(null);
+		toppingReqDto.setEnabled(true);
+		toppingReqDto.setName(null);
+		toppingReqDto.setPrice(0.01);
+		mockMvc.perform(post("/v1/topping/")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(objectMapper.writeValueAsString(toppingReqDto)))
+				.andExpect(status().isBadRequest()).andReturn();
+	}
+
 
 	@WithMockUser(roles = {"ADMIN"})
 	@Test
@@ -185,7 +231,7 @@ class ToppingControllerTest {
 			"/data/sql/initial_setup.sql",
 			"/data/sql/initial_data.sql"
 	})
-	void  disable_Topping() throws Exception {
+	void disable_Topping() throws Exception {
 
 		MvcResult mvcResultGet =
 				mockMvc.perform(

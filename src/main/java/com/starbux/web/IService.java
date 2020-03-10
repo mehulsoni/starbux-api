@@ -1,17 +1,18 @@
 package com.starbux.web;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IService<T, U> {
-	U create(T t);
-	
-	U update(T t);
+	Optional<U> create(T t);
 
-	U get(Long id);
+	Optional<U> update(T t);
 
-	List<U> getAll();
+	Optional<U> get(Long id);
 
-	U enable(Long id);
+	Optional<List<U>> getAll();
 
-	U disable(Long id);
+	Optional<U> enable(Long id);
+
+	Optional<U> disable(Long id);
 }

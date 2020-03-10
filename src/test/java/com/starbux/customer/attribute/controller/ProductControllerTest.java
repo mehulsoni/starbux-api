@@ -61,6 +61,20 @@ class ProductControllerTest {
 			"/data/sql/initial_setup.sql",
 			"/data/sql/initial_data.sql"
 	})
+	void getProduct_byInvalidId_throwException() throws Exception {
+		mockMvc.perform(
+				get("/v1/product/{id}",
+						10))
+				.andExpect(status().isNotFound()).andReturn();
+
+	}
+
+	@Test
+	@Sql(scripts = {
+			"/data/sql/cleanup.sql",
+			"/data/sql/initial_setup.sql",
+			"/data/sql/initial_data.sql"
+	})
 	void get_All_Product() throws Exception {
 		MvcResult mvcResult =
 				mockMvc.perform(
@@ -71,6 +85,17 @@ class ProductControllerTest {
 						new TypeReference<>() {
 						});
 		assertEquals(4, productResDto.size());
+	}
+
+	@Test
+	@Sql(scripts = {
+			"/data/sql/cleanup.sql",
+			"/data/sql/initial_setup.sql"
+	})
+	void get_All_Product_WhenNoData_throwException() throws Exception {
+		mockMvc.perform(
+				get("/v1/product/"))
+				.andExpect(status().isNotFound()).andReturn();
 	}
 
 	@WithMockUser(roles = {"ADMIN"})
@@ -96,6 +121,25 @@ class ProductControllerTest {
 						.getContentAsString(), ProductResDto.class);
 
 		assertEquals(1, responseDto.getId());
+	}
+
+	@WithMockUser(roles = {"ADMIN"})
+	@Test
+	@Sql(scripts = {
+			"/data/sql/cleanup.sql",
+			"/data/sql/initial_setup.sql"
+	})
+	void create_NewProduct_withInvalidData_throwException() throws Exception {
+		ProductReqDto productReqDto = new ProductReqDto();
+		productReqDto.setCode(null);
+		productReqDto.setEnabled(true);
+		productReqDto.setName(null);
+		productReqDto.setPrice(0.01);
+		mockMvc.perform(post("/v1/product/")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(objectMapper.writeValueAsString(productReqDto)))
+				.andExpect(status().isBadRequest()).andReturn();
+
 	}
 
 	@WithMockUser(roles = {"ADMIN"})

@@ -8,6 +8,7 @@ import com.starbux.web.mapper.IProductMapper;
 import com.starbux.web.repository.IProductRepository;
 import com.starbux.web.service.IProductService;
 
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,52 +25,58 @@ public class ProductServiceImpl implements IProductService<ProductReqDto, Produc
 	private IProductMapper productMapper;
 
 	@Override
-	public ProductResDto create(ProductReqDto productReqDto) {
+	public Optional<ProductResDto> create(ProductReqDto productReqDto) {
 		Product product = transformToEntity(productReqDto);
-		return transformToResponse(productRepository.save(product));
+		return Optional.of(transformToResponse(productRepository.save(product)));
 	}
 
 	@Override
-	public ProductResDto update(ProductReqDto productReqDto) {
+	public Optional<ProductResDto> update(ProductReqDto productReqDto) {
 		Product product = transformToEntity(productReqDto);
-		return transformToResponse(productRepository.save(product));
+		return Optional.of(transformToResponse(productRepository.save(product)));
 	}
 
 	@Override
-	public ProductResDto get(Long id) {
-		Optional<Product> product = productRepository.findById(id);
-		if (product.isPresent()) {
-			return transformToResponse(product.get());
+	public Optional<ProductResDto> get(Long id) {
+		try {
+			Optional<Product> product = productRepository.findById(id);
+			if (product.isPresent()) {
+				return Optional.of(transformToResponse(product.get()));
+			}
+			return Optional.empty();
+		} catch (Exception e) {
+			throw new NotFoundException("Not Found");
 		}
-		throw new NotFoundException(
-				String.format("Product not found for given id {}", id));
 	}
 
 	@Override
-	public List<ProductResDto> getAll() {
-		return transformToResponse(productRepository.findAll());
+	public Optional<List<ProductResDto>> getAll() {
+		List<Product> products = productRepository.findAll();
+		if (CollectionUtils.isNotEmpty(products)) {
+			return Optional.of(transformToResponse(products));
+		}
+		return Optional.empty();
 	}
 
 	@Override
-	public ProductResDto enable(Long id) {
+	public Optional<ProductResDto> enable(Long id) {
 		return toggle(id, true);
 	}
 
 	@Override
-	public ProductResDto disable(Long id) {
+	public Optional<ProductResDto> disable(Long id) {
 		return toggle(id, false);
 	}
 
-	private ProductResDto toggle(Long id, boolean b) {
+	private Optional<ProductResDto> toggle(Long id, boolean b) {
 		Optional<Product> productOptional = productRepository.findById(id);
 		if (productOptional.isPresent()) {
 			Product product = productOptional.get();
 			product.setEnabled(b);
 			product = productRepository.save(product);
-			return transformToResponse(product);
+			return Optional.ofNullable(transformToResponse(product));
 		}
-		throw new NotFoundException(
-				String.format("Product not found for given id {}", id));
+		return Optional.empty();
 	}
 
 	private ProductResDto transformToResponse(Product product) {

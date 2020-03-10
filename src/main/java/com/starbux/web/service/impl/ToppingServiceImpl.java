@@ -8,6 +8,7 @@ import com.starbux.web.mapper.IToppingMapper;
 import com.starbux.web.repository.IToppingRepository;
 import com.starbux.web.service.IToppingService;
 
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,53 +25,59 @@ public class ToppingServiceImpl implements IToppingService<ToppingReqDto, Toppin
 	private IToppingMapper toppingMapper;
 
 	@Override
-	public ToppingResDto create(ToppingReqDto toppingReqDto) {
+	public Optional<ToppingResDto> create(ToppingReqDto toppingReqDto) {
 		Topping topping = transformToEntity(toppingReqDto);
 		Topping savedTopping = toppingRepository.save(topping);
-		return transformToResponse(savedTopping);
+		return Optional.ofNullable(transformToResponse(savedTopping));
 	}
 
 	@Override
-	public ToppingResDto update(ToppingReqDto toppingReqDto) {
+	public Optional<ToppingResDto> update(ToppingReqDto toppingReqDto) {
 		Topping topping = transformToEntity(toppingReqDto);
 		Topping updatedTopping = toppingRepository.save(topping);
-		return transformToResponse(updatedTopping);
+		return Optional.ofNullable(transformToResponse(updatedTopping));
 	}
 
 	@Override
-	public ToppingResDto get(Long id) {
+	public Optional<ToppingResDto> get(Long id) {
 		Optional<Topping> topping = toppingRepository.findById(id);
 		if (topping.isPresent()) {
-			return transformToResponse(topping.get());
+			return Optional.of(transformToResponse(topping.get()));
 		}
-		throw new NotFoundException(
-				String.format("Topping not found for given id {}", id));
+		return Optional.empty();
 	}
 
 	@Override
-	public List<ToppingResDto> getAll() {
-		return transformToResponse(toppingRepository.findAll());
+	public Optional<List<ToppingResDto>> getAll() {
+		try {
+			List<Topping> toppings = toppingRepository.findAll();
+			if (CollectionUtils.isNotEmpty(toppings)) {
+				return Optional.of(transformToResponse(toppings));
+			}
+			return Optional.empty();
+		} catch (Exception ex) {
+			throw new NotFoundException("Not Found");
+		}
 	}
 
 	@Override
-	public ToppingResDto enable(Long id) {
+	public Optional<ToppingResDto> enable(Long id) {
 		return toggle(id, true);
 	}
 
-	private ToppingResDto toggle(Long id, boolean flag) {
+	private Optional<ToppingResDto> toggle(Long id, boolean flag) {
 		Optional<Topping> toppingOptional = toppingRepository.findById(id);
 		if (toppingOptional.isPresent()) {
 			Topping topping = toppingOptional.get();
 			topping.setEnabled(flag);
 			topping = toppingRepository.save(topping);
-			return transformToResponse(topping);
+			return Optional.ofNullable(transformToResponse(topping));
 		}
-		throw new NotFoundException(
-				String.format("Topping not found for given id {}", id));
+		return Optional.empty();
 	}
 
 	@Override
-	public ToppingResDto disable(Long id) {
+	public Optional<ToppingResDto> disable(Long id) {
 		return toggle(id, false);
 	}
 
