@@ -13,8 +13,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
 		auth.inMemoryAuthentication()
-				.withUser("user").password("{noop}password").roles("OTHER")
-				.and()
 				.withUser("admin").password("{noop}password").roles("OTHER", "ADMIN");
 	}
 
@@ -26,25 +24,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 				.httpBasic()
 				.and()
 				.authorizeRequests()
-				.antMatchers(HttpMethod.GET, "/v1/topping/**").hasRole("OTHER")
 				.antMatchers(HttpMethod.POST, "/v1/topping").hasRole("ADMIN")
 				.antMatchers(HttpMethod.PUT, "/v1/topping/**").hasRole("ADMIN")
 				.antMatchers(HttpMethod.PATCH, "/v1/topping/**").hasRole("ADMIN")
 				.antMatchers(HttpMethod.DELETE, "/v1/topping/**").hasRole("ADMIN")
 
 
-				.antMatchers(HttpMethod.GET, "/v1/product/**").hasRole("OTHER")
+				.antMatchers(HttpMethod.GET, "/v1/report/**").hasRole("ADMIN")
 				.antMatchers(HttpMethod.POST, "/v1/product").hasRole("ADMIN")
 				.antMatchers(HttpMethod.PUT, "/v1/product/**").hasRole("ADMIN")
 				.antMatchers(HttpMethod.PATCH, "/v1/product/**").hasRole("ADMIN")
 				.antMatchers(HttpMethod.DELETE, "/v1/product/**").hasRole("ADMIN")
-
-
-				.antMatchers(HttpMethod.GET, "/v1/order/**").hasRole("OTHER")
-				.antMatchers(HttpMethod.POST, "/v1/order/**").hasRole("OTHER")
-				.antMatchers(HttpMethod.PUT, "/v1/order/**").hasRole("OTHER")
-				.antMatchers(HttpMethod.PATCH, "/v1/order/**").hasRole("OTHER")
-				.antMatchers(HttpMethod.DELETE, "/v1/order/**").hasRole("OTHER")
 				.and()
 				.csrf().disable()
 				.formLogin().disable();

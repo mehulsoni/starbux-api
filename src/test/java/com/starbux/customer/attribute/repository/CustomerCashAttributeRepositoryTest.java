@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Tag;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 
-@Tag(TestTag.UNIT_TEST)
-@ApiDataJpaTest
-@Sql(scripts = {
-		"/data/sql/cleanup.sql",
-		"/data/sql/setup_move_stage.sql",
-})
-@ActiveProfiles("INTEGRATIONTEST")
+//@Tag(TestTag.UNIT_TEST)
+//@ApiDataJpaTest
+//@Sql(scripts = {
+//		"/data/sql/cleanup.sql",
+//		"/data/sql/initial_setup.sql"
+//})
+//@ActiveProfiles("INTEGRATIONTEST")
 public class CustomerCashAttributeRepositoryTest {
 //  @Autowired
 //  private CustomerCashAttributeRepository customerCashAttributeRepository;

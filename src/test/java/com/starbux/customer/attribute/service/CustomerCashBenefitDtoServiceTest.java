@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Tag;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 
-@Tag(TestTag.UNIT_TEST)
-@ApiIntegrationTest
-@ActiveProfiles("INTEGRATIONTEST")
-@Sql(scripts = {
-		"/data/sql/cleanup.sql",
-		"/data/sql/setup_move_stage.sql"
-})
+//@Tag(TestTag.UNIT_TEST)
+//@ApiIntegrationTest
+//@ActiveProfiles("INTEGRATIONTEST")
+//@Sql(scripts = {
+//		"/data/sql/cleanup.sql",
+//		"/data/sql/initial_setup.sql"
+//})
 class CustomerCashBenefitDtoServiceTest {
 
 //  @Autowired

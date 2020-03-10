@@ -1,8 +1,10 @@
 package com.starbux.customer.attribute.controller;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.starbux.TestTag;
 import com.starbux.configuration.ApiIntegrationTest;
+import com.starbux.dto.response.ProductResDto;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,6 +13,8 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -21,9 +25,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ActiveProfiles("INTEGRATIONTEST")
 @Sql(scripts = {
 		"/data/sql/cleanup.sql",
-		"/data/sql/setup_move_stage.sql"
+		"/data/sql/initial_setup.sql"
 })
-class CustomerAttributeControllerTest {
+class ProductControllerTest {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -32,15 +36,31 @@ class CustomerAttributeControllerTest {
 	private ObjectMapper objectMapper;
 
 	@Test
-	void getNonCashAttributeGroup_byPolicyAttributeGroupId() throws Exception {
+	void getProduct_byId() throws Exception {
 		MvcResult mvcResult =
 				mockMvc.perform(
-						get("/v1/customer/policy/attribute/non-cash/policy-benefit/{id}/groups",
-								"3cd8b33f-5e9b-41fe-a6ea-9c49a36b6619"))
+						get("/v1/product/{id}",
+								1))
 						.andExpect(status().isOk()).andReturn();
-
-		assertEquals(1, 0);
+		ProductResDto productResDto =
+				objectMapper.readValue(mvcResult.getResponse().getContentAsString(),
+						new TypeReference<>() {
+						});
+		assertEquals(1, productResDto.getId());
 	}
 
+	@Test
+	void get_all_Product() throws Exception {
+		MvcResult mvcResult =
+				mockMvc.perform(
+						get("/v1/product/",
+								1))
+						.andExpect(status().isOk()).andReturn();
+		List<ProductResDto> productResDto =
+				objectMapper.readValue(mvcResult.getResponse().getContentAsString(),
+						new TypeReference<>() {
+						});
+		assertEquals(4, productResDto.size());
+	}
 
 }

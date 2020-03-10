@@ -3,8 +3,8 @@ db:
   port: 5432
   database: starbux
   connection-params: "autoReconnect=true&useUnicode=true&characterEncoding=UTF-8"
-  username: "starbux"
-  password: "starbux$cxntkp8lir2g"
+  username: postgres
+  password: YourStrongPassw0rd
 
 spring:
   jpa:

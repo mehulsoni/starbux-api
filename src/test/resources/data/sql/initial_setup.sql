@@ -47,9 +47,6 @@ create table star_bux_customer
 create unique index user_id_uindex
 	on star_bux_customer (id);
 
-create unique index user_id_uindex
-	on star_bux_customer (id);
-
 create table order_cart
 (
 	id serial not null
@@ -99,12 +96,12 @@ create unique index order_topping_id_uindex
 
 
 -- Insert basic products
-insert into product(product_name, product_code, price, enabled) values ('Black Coffee', 'BLACK_COFFEE', 4.0, true);
-insert into product(product_name, product_code, price, enabled) values ('Latte', 'LATTE', 5.0, true);
-insert into product(product_name, product_code, price, enabled) values ('Mocha', 'MOCHA', 6.0, true);
-insert into product(product_name, product_code, price, enabled) values ('Tea', 'TEA', 3.0, true);
+insert into product(id, product_name, product_code, price, enabled) values (1,'Black Coffee', 'BLACK_COFFEE', 4.0, true);
+insert into product(id, product_name, product_code, price, enabled) values (2,'Latte', 'LATTE', 5.0, true);
+insert into product(id, product_name, product_code, price, enabled) values (3,'Mocha', 'MOCHA', 6.0, true);
+insert into product(id, product_name, product_code, price, enabled) values (4,'Tea', 'TEA', 3.0, true);
 -- Insert basic toppings
-insert into topping(topping_name, topping_code, price, enabled) values ('Milk', 'MILK', 2.0, true);
-insert into topping(topping_name, topping_code, price, enabled) values ('Hazelnut syrup', 'HAZELNUT_SYRUP', 3.0, true);
-insert into topping(topping_name, topping_code, price, enabled) values ('Chocolate sauce', 'CHOCOLATE_SAUCE', 5.0, true);
-insert into topping(topping_name, topping_code, price, enabled) values ('Lemon', 'LEMON', 2.0, true);
+insert into topping(id, topping_name, topping_code, price, enabled) values (1,'Milk', 'MILK', 2.0, true);
+insert into topping(id, topping_name, topping_code, price, enabled) values (2,'Hazelnut syrup', 'HAZELNUT_SYRUP', 3.0, true);
+insert into topping(id, topping_name, topping_code, price, enabled) values (3,'Chocolate sauce', 'CHOCOLATE_SAUCE', 5.0, true);
+insert into topping(id, topping_name, topping_code, price, enabled) values (4,'Lemon', 'LEMON', 2.0, true);

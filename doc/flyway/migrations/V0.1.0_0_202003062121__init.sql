@@ -44,13 +44,6 @@ create table star_bux_customer
 	mobile numeric default 000000000
 );
 
-alter table star_bux_customer owner to postgres;
-
-create unique index user_id_uindex
-	on star_bux_customer (id);
-
-
-
 create unique index user_id_uindex
 	on star_bux_customer (id);
 
