@@ -1,0 +1,96 @@
+# ------------------------------------------------------------------------------
+# Custom properties
+api.info:
+  title: starbux-api
+  description: starbux-api, REST API
+  version: v1
+  email: dev@starbux.com
+  name: StarBux
+  url: www.starbux.com
+
+db:
+  host: <SET-DB-HOST>
+  port: <SET-DB-PORT>
+  database: <SET-DB>
+  connection-params: <SET-DB-CONNECTION-PARAMS>
+  username: <SET-DB-USERNAME>
+  password: <SET-DB-PASSWORD>
+
+# ------------------------------------------------------------------------------
+# Spring defined properties
+
+server:
+  port: 6002
+  servlet:
+    context-path: /api
+    session:
+      timeout: 5
+
+spring:
+  application:
+    name: starbux-api
+
+  messages:
+    basename: text/messages
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${db.host}:${db.port}/${db.database}?${db.connection-params}
+    username: ${db.username}
+    password: ${db.password}
+
+    hikari:
+      pool-name: db-conn-pool
+      minimum-idle: 3
+      maximum-pool-size: 10
+      auto-commit: false
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        show_sql: false
+        format_sql: false
+        use_sql_comments: true
+        hbm2ddl.auto: none
+        auto_close_session: true
+        connection:
+          useUnicode: true
+          characterEncoding: UTF-8
+          charSet: UTF-8
+
+  jackson:
+    serialization:
+      indent_output: true
+    date-format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+
+logging:
+  level:
+    com.starbux: TRACE
+    org.springframework: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    org.springframework.transaction: TRACE
+    org.hibernate: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.stat: DEBUG
+    net.sf: OFF
+    org.springframework.aop.framework.CglibAopProxy: ERROR
+
+management:
+  endpoints:
+    web:
+      base-path: /
+
+HOSTNAME: leader
+
+springdoc:
+  api-docs:
+    path: /docs/json
+  swagger-ui:
+    path: /docs

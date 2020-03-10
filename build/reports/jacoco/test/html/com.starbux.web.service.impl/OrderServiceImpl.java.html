@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OrderServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">starbux-api</a> &gt; <a href="index.source.html" class="el_package">com.starbux.web.service.impl</a> &gt; <span class="el_source">OrderServiceImpl.java</span></div><h1>OrderServiceImpl.java</h1><pre class="source lang-java linenums">package com.starbux.web.service.impl;
+
+import com.starbux.dto.request.OrderRequestDto;
+import com.starbux.dto.request.UserReqDto;
+import com.starbux.dto.response.OrderResponseDto;
+import com.starbux.entity.OrderCart;
+import com.starbux.entity.OrderProduct;
+import com.starbux.entity.OrderTopping;
+import com.starbux.entity.Product;
+import com.starbux.entity.Topping;
+import com.starbux.entity.User;
+import com.starbux.enums.Command;
+import com.starbux.exception.InvalidTypeException;
+import com.starbux.exception.NotFoundException;
+import com.starbux.util.CalculationUtility;
+import com.starbux.web.mapper.IOrderMapper;
+import com.starbux.web.mapper.IUserMapper;
+import com.starbux.web.repository.IOrderProductRepository;
+import com.starbux.web.repository.IOrderRepository;
+import com.starbux.web.repository.IOrderToppingRepository;
+import com.starbux.web.repository.IProductRepository;
+import com.starbux.web.repository.IToppingRepository;
+import com.starbux.web.service.IOrderService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+@Transactional
+<span class="fc" id="L37">public class OrderServiceImpl implements IOrderService&lt;OrderRequestDto, OrderResponseDto&gt; {</span>
+
+	@Autowired
+	private IOrderRepository orderRepository;
+
+	@Autowired
+	private IOrderMapper orderMapper;
+
+	@Autowired
+	private IProductRepository productRepository;
+
+	@Autowired
+	private IToppingRepository toppingRepository;
+
+	@Autowired
+	private IOrderProductRepository orderProductRepository;
+
+	@Autowired
+	private IOrderToppingRepository orderToppingRepository;
+
+	@Autowired
+	private IUserMapper userMapper;
+
+	/**
+	 * This method is used for getting order details based on cart id
+	 *
+	 * @param id
+	 * @return
+	 */
+	@Override
+
+	public Optional&lt;OrderResponseDto&gt; getOrder(Long id) {
+<span class="nc" id="L69">		Optional&lt;OrderCart&gt; orderCart = orderRepository.findById(id);</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">		if (orderCart.isPresent()) {</span>
+<span class="nc" id="L71">			OrderCart savedOrderCart = orderCart.get();</span>
+<span class="nc" id="L72">			return Optional.ofNullable(orderMapper.entityToResponseDto(savedOrderCart));</span>
+		} else {
+<span class="nc" id="L74">			throw new NotFoundException(&quot;No order present in cart for given id: &quot; + id);</span>
+		}
+	}
+
+	/**
+	 * This method is user for deleting oder and its products and topping on cancelling order
+	 *
+	 * @param id
+	 * @return
+	 */
+	@Override
+
+	public Optional&lt;Boolean&gt; deleteOrder(Long id) {
+<span class="nc bnc" id="L87" title="All 2 branches missed.">		if (orderRepository.existsById(id)) {</span>
+<span class="nc" id="L88">			orderRepository.deleteById(id);</span>
+<span class="nc" id="L89">			return Optional.of(true);</span>
+		}
+<span class="nc" id="L91">		throw new NotFoundException(&quot;No Cart Order present for given id&quot;);</span>
+	}
+
+	/**
+	 * This method is used for adding item based on type [PRODUCTS/TOPPINGS]
+	 *
+	 * @param cartId
+	 * @param command
+	 * @param id
+	 * @return
+	 */
+	@Override
+
+	public void productOrder(Long cartId, Command command, Long id) {
+<span class="nc bnc" id="L105" title="All 3 branches missed.">		switch (command) {</span>
+			case ADD:
+<span class="nc" id="L107">				addProduct(cartId, id);</span>
+<span class="nc" id="L108">				break;</span>
+			case REMOVE:
+<span class="nc" id="L110">				removeProduct(cartId, id);</span>
+<span class="nc" id="L111">				break;</span>
+			default:
+<span class="nc" id="L113">				throw new InvalidTypeException(&quot;Invalid type passed accepted values are [TOPPINGS/PRODUCTS]&quot;);</span>
+		}
+<span class="nc" id="L115">	}</span>
+
+	/**
+	 * This method is used for removing item based on type [PRODUCTS/TOPPINGS]
+	 *
+	 * @param cartId
+	 * @param orderProductId
+	 * @param command
+	 * @param id
+	 * @return
+	 */
+	@Override
+
+	public void toppingOrder(Long cartId, Long orderProductId, Command command, Long id) {
+<span class="nc bnc" id="L129" title="All 3 branches missed.">		switch (command) {</span>
+			case ADD:
+<span class="nc" id="L131">				addTopping(cartId, orderProductId, id);</span>
+<span class="nc" id="L132">				break;</span>
+			case REMOVE:
+<span class="nc" id="L134">				removeTopping(cartId, orderProductId, id);</span>
+<span class="nc" id="L135">				break;</span>
+			default:
+<span class="nc" id="L137">				throw new InvalidTypeException(&quot;Invalid type passed accepted values are [TOPPINGS/PRODUCTS]&quot;);</span>
+		}
+<span class="nc" id="L139">	}</span>
+
+	/**
+	 * This method is used for adding topping into cart.
+	 *
+	 * @param cartId
+	 * @param orderProductId
+	 * @param id
+	 * @return
+	 */
+	private void addTopping(Long cartId, Long orderProductId, Long id) {
+<span class="nc" id="L150">		checkAndGetOrderCartIfExist(cartId);</span>
+<span class="nc" id="L151">		OrderProduct orderProduct = checkAndGetOrderProductIfExist(orderProductId);</span>
+<span class="nc" id="L152">		Topping topping = checkAndGetToppingIfExist(id);</span>
+<span class="nc" id="L153">		createTopping(orderProduct, topping);</span>
+<span class="nc" id="L154">	}</span>
+
+	/**
+	 * This method is used to get OrderCart if exist else throw NotFoundException
+	 *
+	 * @param cartId
+	 * @return
+	 */
+
+	private OrderCart checkAndGetOrderCartIfExist(Long cartId) {
+<span class="nc" id="L164">		Optional&lt;OrderCart&gt; orderCartOptional = orderRepository.findById(cartId);</span>
+<span class="nc bnc" id="L165" title="All 2 branches missed.">		if (orderCartOptional.isPresent()) {</span>
+<span class="nc" id="L166">			return orderCartOptional.get();</span>
+		} else {
+<span class="nc" id="L168">			throw new NotFoundException(&quot;No Cart found for given id:&quot; + cartId);</span>
+		}
+	}
+
+	/**
+	 * This method is used to get OrderProduct if exist else throw NotFoundException
+	 *
+	 * @param orderProductId
+	 * @return
+	 */
+
+	private OrderProduct checkAndGetOrderProductIfExist(Long orderProductId) {
+<span class="nc" id="L180">		Optional&lt;OrderProduct&gt; orderProduct = orderProductRepository.findById(orderProductId);</span>
+<span class="nc bnc" id="L181" title="All 2 branches missed.">		if (orderProduct.isPresent()) {</span>
+<span class="nc" id="L182">			return orderProduct.get();</span>
+		} else {
+<span class="nc" id="L184">			throw new NotFoundException(&quot;No Product found for given id:&quot; + orderProductId);</span>
+		}
+	}
+
+	/**
+	 * This method is used to get topping if exist else throw NotFoundException
+	 *
+	 * @param id
+	 * @return
+	 */
+	private Topping checkAndGetToppingIfExist(Long id) {
+<span class="nc" id="L195">		Optional&lt;Topping&gt; toppingOptional = toppingRepository.findById(id);</span>
+<span class="nc bnc" id="L196" title="All 2 branches missed.">		if (toppingOptional.isPresent()) {</span>
+<span class="nc" id="L197">			return toppingOptional.get();</span>
+		} else {
+<span class="nc" id="L199">			throw new NotFoundException(&quot;No Topping found for given id:&quot; + id);</span>
+		}
+	}
+
+	/**
+	 * This method is used to get product if exist else throw NotFoundException
+	 *
+	 * @param id
+	 * @return
+	 */
+	private Product checkAndGetProductIfExist(Long id) {
+<span class="nc" id="L210">		Optional&lt;Product&gt; productOptional = productRepository.findById(id);</span>
+<span class="nc bnc" id="L211" title="All 2 branches missed.">		if (productOptional.isPresent()) {</span>
+<span class="nc" id="L212">			return productOptional.get();</span>
+		} else {
+<span class="nc" id="L214">			throw new NotFoundException(&quot;No Product found for given id:&quot; + id);</span>
+		}
+	}
+
+	/**
+	 * This method is used to create Topping
+	 *
+	 * @param orderProduct
+	 * @param topping
+	 * @return
+	 */
+	private OrderTopping createTopping(OrderProduct orderProduct, Topping topping) {
+<span class="nc" id="L226">		OrderTopping orderTopping = new OrderTopping();</span>
+<span class="nc" id="L227">		orderTopping.setTopping(topping);</span>
+<span class="nc" id="L228">		orderTopping.setOrderProduct(orderProduct);</span>
+<span class="nc" id="L229">		return orderToppingRepository.save(orderTopping);</span>
+	}
+
+	/**
+	 * This method is used to get updated cart order and calculate amount and save into order cart table
+	 *
+	 * @param cartId
+	 * @return
+	 */
+	@Override
+	public Optional&lt;OrderResponseDto&gt; updateCart(Long cartId) {
+<span class="nc" id="L240">		OrderCart orderCart = checkAndGetOrderCartIfExist(cartId);</span>
+<span class="nc" id="L241">		orderCart.setAmount(new BigDecimal(CalculationUtility.sum(orderCart.getOrderProducts()))</span>
+<span class="nc" id="L242">				.setScale(2, RoundingMode.DOWN));</span>
+<span class="nc" id="L243">		return Optional.ofNullable(orderMapper.entityToResponseDto(orderRepository.save(orderCart)));</span>
+	}
+
+	/**
+	 * This method is used for adding product into cart.
+	 *
+	 * @param cartId
+	 * @param id
+	 * @return
+	 */
+	private void addProduct(Long cartId, Long id) {
+<span class="nc" id="L254">		OrderCart orderCart = checkAndGetOrderCartIfExist(cartId);</span>
+<span class="nc" id="L255">		Product product = checkAndGetProductIfExist(id);</span>
+<span class="nc" id="L256">		createProduct(orderCart, product);</span>
+<span class="nc" id="L257">	}</span>
+
+	/**
+	 * This method is used for creating product
+	 *
+	 * @param orderCart
+	 * @param product
+	 */
+	private void createProduct(OrderCart orderCart, Product product) {
+<span class="nc" id="L266">		OrderProduct orderProduct = new OrderProduct();</span>
+<span class="nc" id="L267">		orderProduct.setOrderCart(orderCart);</span>
+<span class="nc" id="L268">		orderProduct.setProduct(product);</span>
+<span class="nc" id="L269">		orderProductRepository.save(orderProduct);</span>
+<span class="nc" id="L270">	}</span>
+
+	/**
+	 * This method is used for removing topping from cart.
+	 *
+	 * @param cartId
+	 * @param orderProductId
+	 * @param id
+	 * @return
+	 */
+	private void removeTopping(Long cartId, Long orderProductId, Long id) {
+<span class="nc" id="L281">		checkAndGetOrderCartIfExist(cartId);</span>
+<span class="nc" id="L282">		checkAndGetOrderProductIfExist(orderProductId);</span>
+<span class="nc" id="L283">		orderToppingRepository.deleteById(id);</span>
+<span class="nc" id="L284">	}</span>
+
+	/**
+	 * This method is used for removing product from cart.
+	 *
+	 * @param cartId
+	 * @param id
+	 * @return
+	 */
+	private void removeProduct(Long cartId, Long id) {
+<span class="nc" id="L294">		checkAndGetOrderCartIfExist(cartId);</span>
+<span class="nc" id="L295">		orderProductRepository.deleteById(id);</span>
+<span class="nc" id="L296">	}</span>
+
+	/**
+	 * This method is used for confirming order and return discounted amount if applicable.
+	 *
+	 * @param id
+	 * @return
+	 */
+	@Override
+
+	public Optional&lt;OrderResponseDto&gt; confirmOrder(Long id) {
+<span class="nc" id="L307">		Optional&lt;OrderCart&gt; orderCartOptional = orderRepository.findById(id);</span>
+<span class="nc bnc" id="L308" title="All 2 branches missed.">		if (orderCartOptional.isPresent()) {</span>
+<span class="nc" id="L309">			OrderCart orderCart = orderCartOptional.get();</span>
+<span class="nc" id="L310">			List&lt;OrderProduct&gt; orderProducts = orderCart.getOrderProducts();</span>
+<span class="nc" id="L311">			orderCart.setAmount(new BigDecimal(CalculationUtility.sum(orderProducts))</span>
+<span class="nc" id="L312">					.setScale(2, RoundingMode.DOWN));</span>
+<span class="nc" id="L313">			orderCart.setDiscount(new BigDecimal(CalculationUtility.discount(orderProducts))</span>
+<span class="nc" id="L314">					.setScale(2, RoundingMode.DOWN));</span>
+<span class="nc" id="L315">			OrderCart savedOrder = orderRepository.save(orderCart);</span>
+<span class="nc" id="L316">			return Optional.ofNullable(orderMapper.entityToResponseDto(savedOrder));</span>
+		}
+<span class="nc" id="L318">		return Optional.empty();</span>
+	}
+
+	/**
+	 * This method is used for initializing cart and save user details.
+	 *
+	 * @param requestDto
+	 * @return
+	 */
+	@Override
+
+	public Optional&lt;OrderResponseDto&gt; initiateOrder(UserReqDto requestDto) {
+<span class="nc" id="L330">		OrderCart orderCart = new OrderCart();</span>
+<span class="nc" id="L331">		orderCart.setActive(true);</span>
+<span class="nc" id="L332">		orderCart.setDate(new Date());</span>
+<span class="nc" id="L333">		orderCart.setUser(setUser(requestDto));</span>
+<span class="nc" id="L334">		orderCart.setAmount(new BigDecimal(0.0));</span>
+<span class="nc" id="L335">		orderCart.setDiscount(new BigDecimal(0.0));</span>
+<span class="nc" id="L336">		return Optional.ofNullable(orderMapper.entityToResponseDto(orderRepository.save(orderCart)));</span>
+	}
+
+	/**
+	 * This method is for map user request dto to entity.
+	 *
+	 * @param userReqDto
+	 * @return
+	 */
+	private User setUser(UserReqDto userReqDto) {
+<span class="nc" id="L346">		return userMapper.dtoToEntity(userReqDto);</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

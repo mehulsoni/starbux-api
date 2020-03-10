@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ToppingControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ToppingControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.starbux.customer.attribute.controller.html">com.starbux.customer.attribute.controller</a> &gt; ToppingControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.439s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">create_NewTopping()</td>
+<td class="success">0.083s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">disable_Topping()</td>
+<td class="success">0.192s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">enable_Topping()</td>
+<td class="success">0.624s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getTopping_byId()</td>
+<td class="success">0.104s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">get_All_Topping()</td>
+<td class="success">0.262s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update_NewTopping()</td>
+<td class="success">0.174s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>21:00:10.325 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:00:10.353 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:00:10.408 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.starbux.customer.attribute.controller.ToppingControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:00:10.449 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.starbux.customer.attribute.controller.ToppingControllerTest]: class path resource [com/starbux/customer/attribute/controller/ToppingControllerTest-context.xml] does not exist
+21:00:10.450 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.starbux.customer.attribute.controller.ToppingControllerTest]: class path resource [com/starbux/customer/attribute/controller/ToppingControllerTestContext.groovy] does not exist
+21:00:10.450 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.starbux.customer.attribute.controller.ToppingControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:00:10.451 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.starbux.customer.attribute.controller.ToppingControllerTest]: ToppingControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:00:10.635 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/mehul.soni89/code-merge/starbux-api/build/classes/java/main/com/starbux/StartBuxApplication.class]
+21:00:10.636 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.starbux.StartBuxApplication for test class com.starbux.customer.attribute.controller.ToppingControllerTest
+21:00:10.823 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.starbux.customer.attribute.controller.ToppingControllerTest]: using defaults.
+21:00:10.824 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:00:10.857 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6e9bcad1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b8b2c15, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@40b36741, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@37ec0198, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71188f6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4538e785, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1eea190c, org.springframework.test.context.event.EventPublishingTestExecutionListener@495d2b88, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@42805c6d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@40869f77, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@e6acc12, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2e4bb73c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6e68f5ac, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1a61b231]
+21:00:10.863 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4c194640 testClass = ToppingControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1adbccd2 testClass = ToppingControllerTest, locations = '{}', classes = '{class com.starbux.StartBuxApplication}', contextInitializerClasses = '[class com.starbux.configuration.DataSourceConfiguration$Initializer]', activeProfiles = '{INTEGRATIONTEST}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3308134, [ImportsContextCustomizer@38aab0fd key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5a86e8d1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3fe22810, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2107e7e1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+21:00:10.918 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+21:00:10.974 [Test worker] DEBUG org.testcontainers.utility.TestcontainersConfiguration - Testcontainers configuration overrides will be loaded from file:/Users/mehul.soni89/.testcontainers.properties
+21:00:10.979 [Test worker] DEBUG org.testcontainers.utility.TestcontainersConfiguration - Testcontainers configuration overrides will be loaded from file:/Users/mehul.soni89/code-merge/starbux-api/build/resources/test/testcontainers.properties
+21:00:10.981 [Test worker] DEBUG org.testcontainers.utility.TestcontainersConfiguration - Testcontainers configuration overrides will be loaded from file:/Users/mehul.soni89/code-merge/starbux-api/build/resources/test/testcontainers.properties
+21:00:11.013 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+21:00:11.263 [ducttape-0] DEBUG org.testcontainers.dockerclient.DockerClientProviderStrategy - Pinging docker daemon...
+21:00:11.658 [ducttape-0] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: org.testcontainers.dockerclient.transport.okhttp.OkHttpDockerCmdExecFactory$1@4b7215b3
+21:00:11.811 [Test worker] INFO org.testcontainers.dockerclient.UnixSocketClientProviderStrategy - Accessing docker with local Unix socket
+21:00:11.811 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+21:00:11.811 [Test worker] DEBUG org.testcontainers.dockerclient.DockerClientProviderStrategy - Checking Docker OS type for local Unix socket (unix:///var/run/docker.sock)
+21:00:11.813 [Test worker] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: com.github.dockerjava.core.exec.InfoCmdExec@301e4997
+21:00:12.010 [Test worker] INFO org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+21:00:12.012 [Test worker] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: com.github.dockerjava.core.exec.InfoCmdExec@643c77b6
+21:00:12.036 [Test worker] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: com.github.dockerjava.core.exec.VersionCmdExec@c13ae6e
+21:00:12.075 [Test worker] INFO org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 19.03.4
+  API Version: 1.40
+  Operating System: Docker Desktop
+  Total Memory: 1998 MB
+21:00:12.079 [Test worker] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: ListImagesCmdImpl[imageNameFilter=quay.io/testcontainers/ryuk:0.2.3,showAll=false,filters=com.github.dockerjava.core.util.FiltersBuilder@0,execution=com.github.dockerjava.core.exec.ListImagesCmdExec@27f326cc]
+21:00:12.237 [Test worker] DEBUG org.testcontainers.utility.RegistryAuthLocator - Looking up auth config for image: quay.io/testcontainers/ryuk:0.2.3
+21:00:12.238 [Test worker] DEBUG org.testcontainers.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /Users/mehul.soni89/.docker/config.json (exists) and commandPathPrefix: 
+21:00:12.246 [Test worker] DEBUG org.testcontainers.utility.RegistryAuthLocator - registryName [quay.io] for dockerImageName [quay.io/testcontainers/ryuk:0.2.3]
+21:00:12.247 [Test worker] DEBUG org.testcontainers.utility.RegistryAuthLocator - Executing docker credential provider: docker-credential-desktop to locate auth config for: quay.io
+21:00:12.262 [Test worker] DEBUG org.testcontainers.shaded.org.zeroturnaround.exec.ProcessExecutor - Executing [docker-credential-desktop, get].
+21:00:12.279 [Test worker] DEBUG org.testcontainers.shaded.org.zeroturnaround.exec.ProcessExecutor - Started Process[pid=10657, exitValue=&quot;not exited&quot;]
+21:00:12.408 [WaitForProcess-Process[pid=10657, exitValue=&quot;not exited&quot;]] DEBUG org.testcontainers.shaded.org.zeroturnaround.exec.WaitForProcess - Process[pid=10657, exitValue=1] stopped with exit code 1
+21:00:12.412 [Test worker] DEBUG org.testcontainers.shaded.org.zeroturnaround.exec.ProcessExecutor - Executing [docker-credential-desktop, get].
+21:00:12.419 [Test worker] DEBUG org.testcontainers.shaded.org.zeroturnaround.exec.ProcessExecutor - Started Process[pid=10659, exitValue=&quot;not exited&quot;]
+21:00:12.471 [WaitForProcess-Process[pid=10659, exitValue=&quot;not exited&quot;]] DEBUG org.testcontainers.shaded.org.zeroturnaround.exec.WaitForProcess - Process[pid=10659, exitValue=1] stopped with exit code 1
+21:00:12.473 [Test worker] DEBUG org.testcontainers.utility.RegistryAuthLocator - Got credentials not found error message from docker credential helper - credentials not found in native keychain
+21:00:12.473 [Test worker] INFO org.testcontainers.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for quay.io
+21:00:12.474 [Test worker] DEBUG org.testcontainers.utility.RegistryAuthLocator - no matching Auth Configs - falling back to defaultAuthConfig [null]
+21:00:12.475 [Test worker] DEBUG org.testcontainers.dockerclient.auth.AuthDelegatingDockerClientConfig - Effective auth config [null]
+21:00:12.497 [Test worker] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: com.github.dockerjava.core.command.CreateContainerCmdImpl@2a44dd33[name=testcontainers-ryuk-7184a422-bc13-4b4a-a9bf-f7336e493640,hostName=&lt;null&gt;,domainName=&lt;null&gt;,user=&lt;null&gt;,attachStdin=&lt;null&gt;,attachStdout=&lt;null&gt;,attachStderr=&lt;null&gt;,portSpecs=&lt;null&gt;,tty=&lt;null&gt;,stdinOpen=&lt;null&gt;,stdInOnce=&lt;null&gt;,env=&lt;null&gt;,cmd=&lt;null&gt;,healthcheck=&lt;null&gt;,argsEscaped=&lt;null&gt;,entrypoint=&lt;null&gt;,image=quay.io/testcontainers/ryuk:0.2.3,volumes=com.github.dockerjava.api.model.Volumes@64f7bb42,workingDir=&lt;null&gt;,macAddress=&lt;null&gt;,onBuild=&lt;null&gt;,networkDisabled=&lt;null&gt;,exposedPorts=com.github.dockerjava.api.model.ExposedPorts@630e1451,stopSignal=&lt;null&gt;,stopTimeout=&lt;null&gt;,hostConfig=com.github.dockerjava.api.model.HostConfig@7022d5da[binds=com.github.dockerjava.api.model.Binds@6129f9a7,blkioWeight=&lt;null&gt;,blkioWeightDevice=&lt;null&gt;,blkioDeviceReadBps=&lt;null&gt;,blkioDeviceWriteBps=&lt;null&gt;,blkioDeviceReadIOps=&lt;null&gt;,blkioDeviceWriteIOps=&lt;null&gt;,memorySwappiness=&lt;null&gt;,nanoCPUs=&lt;null&gt;,capAdd=&lt;null&gt;,capDrop=&lt;null&gt;,containerIDFile=&lt;null&gt;,cpuPeriod=&lt;null&gt;,cpuRealtimePeriod=&lt;null&gt;,cpuRealtimeRuntime=&lt;null&gt;,cpuShares=&lt;null&gt;,cpuQuota=&lt;null&gt;,cpusetCpus=&lt;null&gt;,cpusetMems=&lt;null&gt;,devices=&lt;null&gt;,deviceCgroupRules=&lt;null&gt;,diskQuota=&lt;null&gt;,dns=&lt;null&gt;,dnsOptions=&lt;null&gt;,dnsSearch=&lt;null&gt;,extraHosts=&lt;null&gt;,groupAdd=&lt;null&gt;,ipcMode=&lt;null&gt;,cgroup=&lt;null&gt;,links=&lt;null&gt;,logConfig=&lt;null&gt;,lxcConf=&lt;null&gt;,memory=&lt;null&gt;,memorySwap=&lt;null&gt;,memoryReservation=&lt;null&gt;,kernelMemory=&lt;null&gt;,networkMode=&lt;null&gt;,oomKillDisable=&lt;null&gt;,init=&lt;null&gt;,autoRemove=true,oomScoreAdj=&lt;null&gt;,portBindings=&lt;null&gt;,privileged=false,publishAllPorts=true,readonlyRootfs=&lt;null&gt;,restartPolicy=&lt;null&gt;,ulimits=&lt;null&gt;,cpuCount=&lt;null&gt;,cpuPercent=&lt;null&gt;,ioMaximumIOps=&lt;null&gt;,ioMaximumBandwidth=&lt;null&gt;,volumesFrom=&lt;null&gt;,mounts=&lt;null&gt;,pidMode=&lt;null&gt;,isolation=&lt;null&gt;,securityOpts=&lt;null&gt;,storageOpt=&lt;null&gt;,cgroupParent=&lt;null&gt;,volumeDriver=&lt;null&gt;,shmSize=&lt;null&gt;,pidsLimit=&lt;null&gt;,runtime=&lt;null&gt;,tmpFs=&lt;null&gt;,utSMode=&lt;null&gt;,usernsMode=&lt;null&gt;,sysctls=&lt;null&gt;,consoleSize=&lt;null&gt;],labels={org.testcontainers=true},shell=&lt;null&gt;,networkingConfig=&lt;null&gt;,ipv4Address=&lt;null&gt;,ipv6Address=&lt;null&gt;,aliases=&lt;null&gt;,authConfig=&lt;null&gt;,execution=com.github.dockerjava.core.exec.CreateContainerCmdExec@5a8a884f]
+21:00:12.773 [Test worker] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 1c550e6adc9d741932225071d058b67dadd23c1239f6509dbb69ad5862703dd5,com.github.dockerjava.core.exec.StartContainerCmdExec@5b81a84c
+21:00:13.424 [Test worker] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 1c550e6adc9d741932225071d058b67dadd23c1239f6509dbb69ad5862703dd5,false,com.github.dockerjava.core.exec.InspectContainerCmdExec@757902a5
+21:00:13.426 [Test worker] DEBUG com.github.dockerjava.core.exec.InspectContainerCmdExec - GET: OkHttpWebTarget(okHttpClient=org.testcontainers.shaded.okhttp3.OkHttpClient@54be3388, baseUrl=http://docker.socket/, path=[/containers/1c550e6adc9d741932225071d058b67dadd23c1239f6509dbb69ad5862703dd5/json], queryParams={})
+21:00:13.540 [testcontainers-ryuk] DEBUG org.testcontainers.utility.ResourceReaper - Sending 'label=org.testcontainers%3Dtrue&amp;label=org.testcontainers.sessionId%3D7184a422-bc13-4b4a-a9bf-f7336e493640' to Ryuk
+21:00:13.543 [testcontainers-ryuk] DEBUG org.testcontainers.utility.ResourceReaper - Received 'ACK' from Ryuk
+21:00:13.543 [Test worker] INFO org.testcontainers.DockerClientFactory - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+        ℹ︎ Checking the system...
+        ✔ Docker version should be at least 1.6.0
+21:00:13.557 [Test worker] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 1c550e6adc9d741932225071d058b67dadd23c1239f6509dbb69ad5862703dd5,&lt;null&gt;,true,&lt;null&gt;,&lt;null&gt;,&lt;null&gt;,&lt;null&gt;,{df,-P},&lt;null&gt;,&lt;null&gt;,com.github.dockerjava.core.exec.ExecCreateCmdExec@1a526852
+21:00:13.714 [tc-okhttp-stream-1123199484] DEBUG com.github.dockerjava.core.command.ExecStartResultCallback - STDOUT: Filesystem           1024-blocks    Used Available Capacity Mounted on
+overlay               61255492  36421368  21692800  63% /
+tmpfs                    65536         0     65536   0% /dev
+tmpfs                  1023420         0   1023420   0% /sys/fs/cgroup
+shm                      65536         0     65536   0% /dev/shm
+/dev/sda1             61255492  36421368  21692800  63% /etc/resolv.conf
+/dev/sda1             61255492  36421368  21692800  63% /etc/hostname
+/dev/sda1             61255492  36421368  21692800  63% /etc/hosts
+tmpfs                   204688       596    204092   0% /run/docker.sock
+tmpfs                  1023420         0   1023420   0% /proc/acpi
+tmpfs                    65536         0     65536   0% /proc/kcore
+tmpfs                    65536         0     65536   0% /proc/keys
+tmpfs                    65536         0     65536   0% /proc/timer_list
+tmpfs                    65536         0     65536   0% /proc/sched_debug
+tmpfs                  1023420         0   1023420   0% /sys/firmware
+        ✔ Docker environment should have more than 2GB free disk space
+21:00:13.774 [Test worker] DEBUG com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: ListImagesCmdImpl[imageNameFilter=&lt;null&gt;,showAll=false,filters=com.github.dockerjava.core.util.FiltersBuilder@0,execution=com.github.dockerjava.core.exec.ListImagesCmdExec@6cb1cb58]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.5.RELEASE)
+
+2020-03-10 21:00:19.690  INFO 10656 --- [    Test worker] c.s.c.a.c.ToppingControllerTest          : Starting ToppingControllerTest on Mehuls-MBP with PID 10656 (started by mehul.soni89 in /Users/mehul.soni89/code-merge/starbux-api)
+2020-03-10 21:00:19.691 DEBUG 10656 --- [    Test worker] c.s.c.a.c.ToppingControllerTest          : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-10 21:00:19.691  INFO 10656 --- [    Test worker] c.s.c.a.c.ToppingControllerTest          : The following profiles are active: INTEGRATIONTEST
+2020-03-10 21:00:19.711 DEBUG 10656 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4567571f
+2020-03-10 21:00:20.816  INFO 10656 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-10 21:00:20.933  INFO 10656 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107ms. Found 6 JPA repository interfaces.
+2020-03-10 21:00:21.735  INFO 10656 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.8 by Redgate
+2020-03-10 21:00:21.737 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Scanning for filesystem resources at 'doc/flyway/archive'
+2020-03-10 21:00:21.737 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Scanning for resources in path: doc/flyway/archive (doc/flyway/archive)
+2020-03-10 21:00:21.739 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Found filesystem resource: doc/flyway/archive/README.md
+2020-03-10 21:00:21.739 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Scanning for filesystem resources at 'doc/flyway/migrations'
+2020-03-10 21:00:21.740 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Scanning for resources in path: doc/flyway/migrations (doc/flyway/migrations)
+2020-03-10 21:00:21.740 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Found filesystem resource: doc/flyway/migrations/V0.1.0_0_202003062121__init.sql
+2020-03-10 21:00:21.740 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Found filesystem resource: doc/flyway/migrations/V0.1.0_0_202003062345__load_data.sql
+2020-03-10 21:00:21.740 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Found filesystem resource: doc/flyway/migrations/generateMigrationFile.sh
+2020-03-10 21:00:21.740 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Scanning for filesystem resources at 'doc/flyway/post_migrations'
+2020-03-10 21:00:21.741 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Scanning for resources in path: doc/flyway/post_migrations (doc/flyway/post_migrations)
+2020-03-10 21:00:21.741 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Found filesystem resource: doc/flyway/post_migrations/README.md
+2020-03-10 21:00:21.741 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Found filesystem resource: doc/flyway/post_migrations/generateMigrationFile.sh
+2020-03-10 21:00:21.741 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Found filesystem resource: doc/flyway/post_migrations/generatePostMigrationFile.sh
+2020-03-10 21:00:21.741 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Scanning for filesystem resources at 'doc/flyway/test'
+2020-03-10 21:00:21.741 DEBUG 10656 --- [    Test worker] o.f.c.i.s.filesystem.FileSystemScanner   : Scanning for resources in path: doc/flyway/test (doc/flyway/test)
+2020-03-10 21:00:21.920  INFO 10656 --- [    Test worker] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:postgresql://localhost:32890/test (PostgreSQL 9.6)
+2020-03-10 21:00:21.921 DEBUG 10656 --- [    Test worker] o.f.c.internal.database.DatabaseFactory  : Driver  : PostgreSQL JDBC Driver 42.2.10
+2020-03-10 21:00:21.922 DEBUG 10656 --- [    Test worker] org.flywaydb.core.Flyway                 : DDL Transactions Supported: true
+2020-03-10 21:00:21.922 DEBUG 10656 --- [    Test worker] org.flywaydb.core.Flyway                 : Schema: public
+2020-03-10 21:00:21.933 DEBUG 10656 --- [    Test worker] o.f.c.i.c.SqlScriptCallbackFactory       : Scanning for SQL callbacks ...
+2020-03-10 21:00:21.934 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/archive/README.md (filename: README.md)
+2020-03-10 21:00:21.934 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/migrations/generateMigrationFile.sh (filename: generateMigrationFile.sh)
+2020-03-10 21:00:21.934 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/post_migrations/README.md (filename: README.md)
+2020-03-10 21:00:21.934 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/post_migrations/generateMigrationFile.sh (filename: generateMigrationFile.sh)
+2020-03-10 21:00:21.934 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/post_migrations/generatePostMigrationFile.sh (filename: generatePostMigrationFile.sh)
+2020-03-10 21:00:21.946 DEBUG 10656 --- [    Test worker] o.f.core.internal.command.DbValidate     : Validating migrations ...
+2020-03-10 21:00:21.949 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/archive/README.md (filename: README.md)
+2020-03-10 21:00:21.949 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/migrations/generateMigrationFile.sh (filename: generateMigrationFile.sh)
+2020-03-10 21:00:21.949 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/post_migrations/README.md (filename: README.md)
+2020-03-10 21:00:21.949 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/post_migrations/generateMigrationFile.sh (filename: generateMigrationFile.sh)
+2020-03-10 21:00:21.949 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/post_migrations/generatePostMigrationFile.sh (filename: generatePostMigrationFile.sh)
+2020-03-10 21:00:21.956 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/archive/README.md (filename: README.md)
+2020-03-10 21:00:21.956 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/migrations/V0.1.0_0_202003062121__init.sql (filename: V0.1.0_0_202003062121__init.sql)
+2020-03-10 21:00:21.956 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/migrations/V0.1.0_0_202003062345__load_data.sql (filename: V0.1.0_0_202003062345__load_data.sql)
+2020-03-10 21:00:21.956 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/migrations/generateMigrationFile.sh (filename: generateMigrationFile.sh)
+2020-03-10 21:00:21.956 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/post_migrations/README.md (filename: README.md)
+2020-03-10 21:00:21.956 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/post_migrations/generateMigrationFile.sh (filename: generateMigrationFile.sh)
+2020-03-10 21:00:21.956 DEBUG 10656 --- [    Test worker] o.f.core.internal.scanner.Scanner        : Filtering out resource: doc/flyway/post_migrations/generatePostMigrationFile.sh (filename: generatePostMigrationFile.sh)
+2020-03-10 21:00:21.964  INFO 10656 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.017s)
+2020-03-10 21:00:21.977 DEBUG 10656 --- [    Test worker] o.f.core.internal.command.DbSchemas      : Schema &quot;public&quot; already exists. Skipping schema creation.
+2020-03-10 21:00:21.984  INFO 10656 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table &quot;public&quot;.&quot;flyway_schema_history&quot; ...
+2020-03-10 21:00:21.987 DEBUG 10656 --- [    Test worker] o.flywaydb.core.internal.parser.Parser   : Parsing  ...
+2020-03-10 21:00:21.995 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 1: CREATE TABLE &quot;public&quot;.&quot;flyway_schema_history&quot; (
+    &quot;installed_rank&quot; INT NOT NULL,
+    &quot;version&quot; VARCHAR(50),
+    &quot;description&quot; VARCHAR(200) NOT NULL,
+    &quot;type&quot; VARCHAR(20) NOT NULL,
+    &quot;script&quot; VARCHAR(1000) NOT NULL,
+    &quot;checksum&quot; INTEGER,
+    &quot;installed_by&quot; VARCHAR(100) NOT NULL,
+    &quot;installed_on&quot; TIMESTAMP NOT NULL DEFAULT now(),
+    &quot;execution_time&quot; INTEGER NOT NULL,
+    &quot;success&quot; BOOLEAN NOT NULL
+)
+2020-03-10 21:00:21.996 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 13: ALTER TABLE &quot;public&quot;.&quot;flyway_schema_history&quot; ADD CONSTRAINT &quot;flyway_schema_history_pk&quot; PRIMARY KEY (&quot;installed_rank&quot;)
+2020-03-10 21:00:21.997 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 14: CREATE INDEX &quot;flyway_schema_history_s_idx&quot; ON &quot;public&quot;.&quot;flyway_schema_history&quot; (&quot;success&quot;)
+2020-03-10 21:00:21.997 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE TABLE &quot;public&quot;.&quot;flyway_schema_history&quot; (
+    &quot;installed_rank&quot; INT NOT NULL,
+    &quot;version&quot; VARCHAR(50),
+    &quot;description&quot; VARCHAR(200) NOT NULL,
+    &quot;type&quot; VARCHAR(20) NOT NULL,
+    &quot;script&quot; VARCHAR(1000) NOT NULL,
+    &quot;checksum&quot; INTEGER,
+    &quot;installed_by&quot; VARCHAR(100) NOT NULL,
+    &quot;installed_on&quot; TIMESTAMP NOT NULL DEFAULT now(),
+    &quot;execution_time&quot; INTEGER NOT NULL,
+    &quot;success&quot; BOOLEAN NOT NULL
+)
+2020-03-10 21:00:22.004 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.004 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: ALTER TABLE &quot;public&quot;.&quot;flyway_schema_history&quot; ADD CONSTRAINT &quot;flyway_schema_history_pk&quot; PRIMARY KEY (&quot;installed_rank&quot;)
+2020-03-10 21:00:22.006 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.006 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: CREATE INDEX &quot;flyway_schema_history_s_idx&quot; ON &quot;public&quot;.&quot;flyway_schema_history&quot; (&quot;success&quot;)
+2020-03-10 21:00:22.008 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.008 DEBUG 10656 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Created Schema History table &quot;public&quot;.&quot;flyway_schema_history&quot;
+2020-03-10 21:00:22.023  INFO 10656 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema &quot;public&quot;: &lt;&lt; Empty Schema &gt;&gt;
+2020-03-10 21:00:22.024 DEBUG 10656 --- [    Test worker] o.flywaydb.core.internal.parser.Parser   : Parsing V0.1.0_0_202003062121__init.sql ...
+2020-03-10 21:00:22.025 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 1: create table product
+(
+	id serial not null
+		constraint product_pk
+			primary key,
+	product_name varchar not null,
+	product_code varchar not null,
+	price numeric not null,
+	enabled boolean default true not null
+)
+2020-03-10 21:00:22.026 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 12: create unique index product_id_uindex
+	on product (id)
+2020-03-10 21:00:22.028 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 15: create unique index product_product_code_uindex
+	on product (product_code)
+2020-03-10 21:00:22.028 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 18: create table topping
+(
+	id serial not null
+		constraint topping_pk
+			primary key,
+	topping_name varchar not null,
+	topping_code varchar not null,
+	price numeric not null,
+	enabled boolean default true not null
+)
+2020-03-10 21:00:22.029 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 29: create unique index topping_id_uindex
+	on topping (id)
+2020-03-10 21:00:22.030 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 32: create unique index topping_topping_code_uindex
+	on topping (topping_code)
+2020-03-10 21:00:22.030 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 36: create table star_bux_customer
+(
+	id serial not null
+		constraint user_pk
+			primary key,
+	first_name varchar default 'user'::character varying,
+	last_name varchar default 'anonymous'::character varying,
+	email varchar default 'test@starbux.com'::character varying,
+	mobile numeric default 000000000
+)
+2020-03-10 21:00:22.032 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 47: create unique index user_id_uindex
+	on star_bux_customer (id)
+2020-03-10 21:00:22.032 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 50: create table order_cart
+(
+	id serial not null
+		constraint order_cart_pk
+			primary key,
+	star_bux_customer_id integer not null
+		constraint order_cart_star_bux_customer_id_fk
+			references star_bux_customer,
+	is_active boolean not null,
+	amount numeric,
+	discount numeric,
+	date timestamp with time zone
+)
+2020-03-10 21:00:22.033 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 64: create unique index order_cart_id_uindex
+	on order_cart (id)
+2020-03-10 21:00:22.034 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 67: create table order_product
+(
+	id serial not null
+		constraint order_product_pk
+			primary key,
+	order_cart_id integer not null
+		constraint order_product_order_cart_id_fk
+			references order_cart,
+	product_id integer not null
+)
+2020-03-10 21:00:22.035 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 78: create unique index order_product_id_uindex
+	on order_product (id)
+2020-03-10 21:00:22.035 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 81: create table order_topping
+(
+	id serial not null
+		constraint order_topping_pk
+			primary key,
+	topping_id integer not null
+		constraint order_topping_topping_id_fk
+			references topping,
+	order_product_id integer not null
+		constraint order_topping_order_product_id_fk
+			references order_product
+)
+2020-03-10 21:00:22.037 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 94: create unique index order_topping_id_uindex
+	on order_topping (id)
+2020-03-10 21:00:22.038 DEBUG 10656 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Starting migration of schema &quot;public&quot; to version 0.1.0.0.202003062121 - init ...
+2020-03-10 21:00:22.042  INFO 10656 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema &quot;public&quot; to version 0.1.0.0.202003062121 - init
+2020-03-10 21:00:22.042 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create table product
+(
+	id serial not null
+		constraint product_pk
+			primary key,
+	product_name varchar not null,
+	product_code varchar not null,
+	price numeric not null,
+	enabled boolean default true not null
+)
+2020-03-10 21:00:22.045 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.046 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create unique index product_id_uindex
+	on product (id)
+2020-03-10 21:00:22.047 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.047 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create unique index product_product_code_uindex
+	on product (product_code)
+2020-03-10 21:00:22.048 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.049 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create table topping
+(
+	id serial not null
+		constraint topping_pk
+			primary key,
+	topping_name varchar not null,
+	topping_code varchar not null,
+	price numeric not null,
+	enabled boolean default true not null
+)
+2020-03-10 21:00:22.051 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.051 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create unique index topping_id_uindex
+	on topping (id)
+2020-03-10 21:00:22.053 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.053 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create unique index topping_topping_code_uindex
+	on topping (topping_code)
+2020-03-10 21:00:22.054 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.055 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create table star_bux_customer
+(
+	id serial not null
+		constraint user_pk
+			primary key,
+	first_name varchar default 'user'::character varying,
+	last_name varchar default 'anonymous'::character varying,
+	email varchar default 'test@starbux.com'::character varying,
+	mobile numeric default 000000000
+)
+2020-03-10 21:00:22.058 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.058 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create unique index user_id_uindex
+	on star_bux_customer (id)
+2020-03-10 21:00:22.059 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.059 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create table order_cart
+(
+	id serial not null
+		constraint order_cart_pk
+			primary key,
+	star_bux_customer_id integer not null
+		constraint order_cart_star_bux_customer_id_fk
+			references star_bux_customer,
+	is_active boolean not null,
+	amount numeric,
+	discount numeric,
+	date timestamp with time zone
+)
+2020-03-10 21:00:22.062 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.063 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create unique index order_cart_id_uindex
+	on order_cart (id)
+2020-03-10 21:00:22.064 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.065 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create table order_product
+(
+	id serial not null
+		constraint order_product_pk
+			primary key,
+	order_cart_id integer not null
+		constraint order_product_order_cart_id_fk
+			references order_cart,
+	product_id integer not null
+)
+2020-03-10 21:00:22.067 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.068 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create unique index order_product_id_uindex
+	on order_product (id)
+2020-03-10 21:00:22.069 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.070 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create table order_topping
+(
+	id serial not null
+		constraint order_topping_pk
+			primary key,
+	topping_id integer not null
+		constraint order_topping_topping_id_fk
+			references topping,
+	order_product_id integer not null
+		constraint order_topping_order_product_id_fk
+			references order_product
+)
+2020-03-10 21:00:22.073 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.073 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: create unique index order_topping_id_uindex
+	on order_topping (id)
+2020-03-10 21:00:22.074 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 0
+2020-03-10 21:00:22.075 DEBUG 10656 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully completed migration of schema &quot;public&quot; to version 0.1.0.0.202003062121 - init
+2020-03-10 21:00:22.085 DEBUG 10656 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema History table &quot;public&quot;.&quot;flyway_schema_history&quot; successfully updated to reflect changes
+2020-03-10 21:00:22.098 DEBUG 10656 --- [    Test worker] o.flywaydb.core.internal.parser.Parser   : Parsing V0.1.0_0_202003062345__load_data.sql ...
+2020-03-10 21:00:22.100 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 2: -- Insert basic products
+insert into product(product_name, product_code, price, enabled) values ('Black Coffee', 'BLACK_COFFEE', 4.0, true)
+2020-03-10 21:00:22.101 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 4: insert into product(product_name, product_code, price, enabled) values ('Latte', 'LATTE', 5.0, true)
+2020-03-10 21:00:22.101 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 5: insert into product(product_name, product_code, price, enabled) values ('Mocha', 'MOCHA', 6.0, true)
+2020-03-10 21:00:22.101 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 6: insert into product(product_name, product_code, price, enabled) values ('Tea', 'TEA', 3.0, true)
+2020-03-10 21:00:22.102 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 7: -- Insert basic toppings
+insert into topping(topping_name, topping_code, price, enabled) values ('Milk', 'MILK', 2.0, true)
+2020-03-10 21:00:22.102 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 9: insert into topping(topping_name, topping_code, price, enabled) values ('Hazelnut syrup', 'HAZELNUT_SYRUP', 3.0, true)
+2020-03-10 21:00:22.105 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 10: insert into topping(topping_name, topping_code, price, enabled) values ('Chocolate sauce', 'CHOCOLATE_SAUCE', 5.0, true)
+2020-03-10 21:00:22.105 DEBUG 10656 --- [    Test worker] o.f.c.i.sqlscript.ParserSqlScript        : Found statement at line 11: insert into topping(topping_name, topping_code, price, enabled) values ('Lemon', 'LEMON', 2.0, true)
+2020-03-10 21:00:22.105 DEBUG 10656 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Starting migration of schema &quot;public&quot; to version 0.1.0.0.202003062345 - load data ...
+2020-03-10 21:00:22.114  INFO 10656 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema &quot;public&quot; to version 0.1.0.0.202003062345 - load data
+2020-03-10 21:00:22.114 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: -- Insert basic products
+insert into product(product_name, product_code, price, enabled) values ('Black Coffee', 'BLACK_COFFEE', 4.0, true)
+2020-03-10 21:00:22.116 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 1
+2020-03-10 21:00:22.116 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: insert into product(product_name, product_code, price, enabled) values ('Latte', 'LATTE', 5.0, true)
+2020-03-10 21:00:22.118 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 1
+2020-03-10 21:00:22.118 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: insert into product(product_name, product_code, price, enabled) values ('Mocha', 'MOCHA', 6.0, true)
+2020-03-10 21:00:22.121 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 1
+2020-03-10 21:00:22.122 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: insert into product(product_name, product_code, price, enabled) values ('Tea', 'TEA', 3.0, true)
+2020-03-10 21:00:22.123 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 1
+2020-03-10 21:00:22.123 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: -- Insert basic toppings
+insert into topping(topping_name, topping_code, price, enabled) values ('Milk', 'MILK', 2.0, true)
+2020-03-10 21:00:22.125 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 1
+2020-03-10 21:00:22.125 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: insert into topping(topping_name, topping_code, price, enabled) values ('Hazelnut syrup', 'HAZELNUT_SYRUP', 3.0, true)
+2020-03-10 21:00:22.127 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 1
+2020-03-10 21:00:22.127 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: insert into topping(topping_name, topping_code, price, enabled) values ('Chocolate sauce', 'CHOCOLATE_SAUCE', 5.0, true)
+2020-03-10 21:00:22.128 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 1
+2020-03-10 21:00:22.128 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Executing SQL: insert into topping(topping_name, topping_code, price, enabled) values ('Lemon', 'LEMON', 2.0, true)
+2020-03-10 21:00:22.130 DEBUG 10656 --- [    Test worker] o.f.c.i.s.DefaultSqlScriptExecutor       : Update Count: 1
+2020-03-10 21:00:22.130 DEBUG 10656 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully completed migration of schema &quot;public&quot; to version 0.1.0.0.202003062345 - load data
+2020-03-10 21:00:22.136 DEBUG 10656 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema History table &quot;public&quot;.&quot;flyway_schema_history&quot; successfully updated to reflect changes
+2020-03-10 21:00:22.147  INFO 10656 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema &quot;public&quot; (execution time 00:00.131s)
+2020-03-10 21:00:22.157 DEBUG 10656 --- [    Test worker] org.flywaydb.core.Flyway                 : Memory usage: 167 of 256M
+2020-03-10 21:00:22.291  INFO 10656 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-10 21:00:22.374  INFO 10656 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-10 21:00:22.520  INFO 10656 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-10 21:00:22.651  INFO 10656 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-03-10 21:00:23.556  INFO 10656 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-10 21:00:23.564  INFO 10656 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-10 21:00:24.327 TRACE 10656 --- [    Test worker] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'com.starbux.web.service.impl.OrderServiceImpl.getOrder' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-03-10 21:00:24.337 TRACE 10656 --- [    Test worker] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'com.starbux.web.service.impl.OrderServiceImpl.updateCart' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-03-10 21:00:24.338 TRACE 10656 --- [    Test worker] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'com.starbux.web.service.impl.OrderServiceImpl.confirmOrder' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-03-10 21:00:24.338 TRACE 10656 --- [    Test worker] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'com.starbux.web.service.impl.OrderServiceImpl.initiateOrder' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-03-10 21:00:24.338 TRACE 10656 --- [    Test worker] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'com.starbux.web.service.impl.OrderServiceImpl.deleteOrder' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-03-10 21:00:24.338 TRACE 10656 --- [    Test worker] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'com.starbux.web.service.impl.OrderServiceImpl.productOrder' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-03-10 21:00:24.339 TRACE 10656 --- [    Test worker] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'com.starbux.web.service.impl.OrderServiceImpl.toppingOrder' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-03-10 21:00:24.677  INFO 10656 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-10 21:00:24.693 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-03-10 21:00:24.807 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 25 mappings in 'requestMappingHandlerMapping'
+2020-03-10 21:00:25.639 DEBUG 10656 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /**/swagger-ui/**] in 'resourceHandlerMapping'
+2020-03-10 21:00:25.654 DEBUG 10656 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-03-10 21:00:26.356 DEBUG 10656 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/v1/topping', POST]
+2020-03-10 21:00:26.357 DEBUG 10656 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/v1/topping/**', PUT]
+2020-03-10 21:00:26.357 DEBUG 10656 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/v1/topping/**', PATCH]
+2020-03-10 21:00:26.357 DEBUG 10656 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/v1/topping/**', DELETE]
+2020-03-10 21:00:26.358 DEBUG 10656 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/v1/report/**', GET]
+2020-03-10 21:00:26.358 DEBUG 10656 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/v1/product', POST]
+2020-03-10 21:00:26.358 DEBUG 10656 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/v1/product/**', PUT]
+2020-03-10 21:00:26.358 DEBUG 10656 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/v1/product/**', PATCH]
+2020-03-10 21:00:26.359 DEBUG 10656 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/v1/product/**', DELETE]
+2020-03-10 21:00:26.369 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2020-03-10 21:00:26.370 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2020-03-10 21:00:26.376  INFO 10656 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47b8db32, org.springframework.security.web.context.SecurityContextPersistenceFilter@55897511, org.springframework.security.web.header.HeaderWriterFilter@957fe02, org.springframework.security.web.authentication.logout.LogoutFilter@12819e87, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@15fc09cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@eefab13, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fbe6bd4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@317238c6, org.springframework.security.web.session.SessionManagementFilter@74a4760a, org.springframework.security.web.access.ExceptionTranslationFilter@4dab0e41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f9fb1e6]
+2020-03-10 21:00:26.523  INFO 10656 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-03-10 21:00:26.523  INFO 10656 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-03-10 21:00:26.536  INFO 10656 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path ''
+2020-03-10 21:00:26.571  INFO 10656 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 48 ms
+2020-03-10 21:00:26.623  INFO 10656 --- [    Test worker] c.s.c.a.c.ToppingControllerTest          : Started ToppingControllerTest in 12.673 seconds (JVM running for 17.787)
+2020-03-10 21:00:26.728 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@662a4cd1] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:26.729 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@43267dd9] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:26.729 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:26.731 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@662a4cd1] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:26.797 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@662a4cd1] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:26.801 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:26.801 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@43267dd9] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:26.801 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@662a4cd1] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:26.955 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:26.955 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:26.960 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:26.962 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@30ad6a5b
+2020-03-10 21:00:26.970 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:26.972 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:26.972 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:26.972 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:26.973 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:26.973 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:26.974 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/3'; against '/logout'
+2020-03-10 21:00:26.974 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:26.974 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'POST /logout'
+2020-03-10 21:00:26.974 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:26.974 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'PUT /logout'
+2020-03-10 21:00:26.974 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:26.974 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'DELETE /logout'
+2020-03-10 21:00:26.974 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:26.975 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:26.975 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:26.975 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:26.975 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:26.977 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:26.977 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:26.977 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:26.978 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:26.978 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:26.979 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:26.979 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:26.979 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:26.979 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:26.979 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/3'; against '/v1/report/**'
+2020-03-10 21:00:26.979 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'POST /v1/product'
+2020-03-10 21:00:26.979 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:26.979 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:26.979 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/3' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:26.980 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:26.980 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/3 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:26.988 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ToppingControllerImpl#get(Long)
+2020-03-10 21:00:26.989 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@6fd665dd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.020 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:27.023 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@6fd665dd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.023 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@6eca88de] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.023 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.024 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.026 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.027 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.027 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.028 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@6fd665dd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.043 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+Hibernate: 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+2020-03-10 21:00:27.068 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.071 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.072 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@6eca88de] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.072 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:27.085 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:27.154 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ToppingResDto@560128d6]
+2020-03-10 21:00:27.173 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:27.174 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@6fd665dd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.175 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:27.176 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:27.248 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:27.249 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:27.249 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:27.249 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@66ead16a
+2020-03-10 21:00:27.249 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:27.249 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:27.250 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.250 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:27.250 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:27.250 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:27.250 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/enable/3' doesn't match 'GET /logout'
+2020-03-10 21:00:27.250 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:27.250 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/enable/3' doesn't match 'POST /logout'
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/enable/3' doesn't match 'PUT /logout'
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/enable/3' doesn't match 'DELETE /logout'
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:27.251 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:27.252 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.252 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:27.252 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:27.252 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:27.252 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/enable/3' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:27.252 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/enable/3' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:27.252 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/enable/3'; against '/v1/topping/**'
+2020-03-10 21:00:27.252 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /v1/topping/enable/3; Attributes: [hasRole('ROLE_ADMIN')]
+2020-03-10 21:00:27.253 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN
+2020-03-10 21:00:27.257 DEBUG 10656 --- [    Test worker] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@469f2736, returned: 1
+2020-03-10 21:00:27.257 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-03-10 21:00:27.257 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-03-10 21:00:27.258 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/enable/3 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:27.259 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ToppingControllerImpl#enable(Long)
+2020-03-10 21:00:27.259 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@719682ae] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.260 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:27.260 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@719682ae] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.261 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@4cabc18b] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.261 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.261 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.261 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.261 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.261 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.261 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@719682ae] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.262 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+Hibernate: 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+2020-03-10 21:00:27.265 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.268 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.268 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@4cabc18b] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.268 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:27.268 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@11c889c9] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:27.269 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@719682ae] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.269 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@75d3f54e] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.269 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.269 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:27.274 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@719682ae] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.283 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:27.302 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* update
+        com.starbux.entity.Topping */ update
+            topping 
+        set
+            topping_code=?,
+            enabled=?,
+            topping_name=?,
+            price=? 
+        where
+            id=?
+Hibernate: 
+    /* update
+        com.starbux.entity.Topping */ update
+            topping 
+        set
+            topping_code=?,
+            enabled=?,
+            topping_name=?,
+            price=? 
+        where
+            id=?
+2020-03-10 21:00:27.311 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.311 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@75d3f54e] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.311 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@11c889c9] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:27.312 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:27.312 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ToppingResDto@5ab603a1]
+2020-03-10 21:00:27.313 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:27.314 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@719682ae] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.314 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:27.314 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:27.331 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@6348973] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.332 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@684476b0] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.332 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.332 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@6348973] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:27.402 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@6348973] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:27.405 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.405 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@684476b0] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.405 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@6348973] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.407 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:27.408 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:27.408 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:27.408 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@1ba4ba8a
+2020-03-10 21:00:27.409 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:27.409 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:27.409 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.409 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:27.409 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/1'; against '/logout'
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'POST /logout'
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PUT /logout'
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'DELETE /logout'
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:27.410 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:27.411 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/1'; against '/v1/report/**'
+2020-03-10 21:00:27.412 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'POST /v1/product'
+2020-03-10 21:00:27.412 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:27.412 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:27.412 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:27.412 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:27.412 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:27.413 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ToppingControllerImpl#get(Long)
+2020-03-10 21:00:27.414 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@79f37fa1] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.414 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:27.414 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@79f37fa1] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.415 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@473deaff] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.415 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.415 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.415 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.415 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.415 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.415 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@79f37fa1] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.415 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+Hibernate: 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+2020-03-10 21:00:27.426 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.430 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.430 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@473deaff] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.430 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:27.430 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:27.431 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ToppingResDto@44e43303]
+2020-03-10 21:00:27.432 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:27.433 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@79f37fa1] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.434 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:27.435 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:27.441 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:27.441 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:27.441 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:27.441 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@6ab8d770
+2020-03-10 21:00:27.442 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:27.442 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:27.442 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.442 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/' doesn't match 'GET /logout'
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/' doesn't match 'POST /logout'
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/' doesn't match 'PUT /logout'
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/' doesn't match 'DELETE /logout'
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:27.443 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:27.444 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:27.444 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:27.444 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:27.444 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:27.444 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.444 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:27.444 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/'; against '/v1/topping/**'
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /v1/topping/; Attributes: [hasRole('ROLE_ADMIN')]
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@469f2736, returned: 1
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-03-10 21:00:27.445 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:27.446 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ToppingControllerImpl#update(ToppingReqDto)
+2020-03-10 21:00:27.447 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@5d0d1951] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.473 DEBUG 10656 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read &quot;application/json;charset=UTF-8&quot; to [com.starbux.dto.request.ToppingReqDto@7ad783d6]
+2020-03-10 21:00:27.482 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@11c889c9] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:27.482 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@5d0d1951] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.483 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@6f9e08ef] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.483 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.483 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:27.483 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@5d0d1951] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.485 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* load com.starbux.entity.Topping */ select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+Hibernate: 
+    /* load com.starbux.entity.Topping */ select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+2020-03-10 21:00:27.490 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:27.491 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* update
+        com.starbux.entity.Topping */ update
+            topping 
+        set
+            topping_code=?,
+            enabled=?,
+            topping_name=?,
+            price=? 
+        where
+            id=?
+Hibernate: 
+    /* update
+        com.starbux.entity.Topping */ update
+            topping 
+        set
+            topping_code=?,
+            enabled=?,
+            topping_name=?,
+            price=? 
+        where
+            id=?
+2020-03-10 21:00:27.496 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.496 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@6f9e08ef] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.497 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@11c889c9] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:27.497 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:27.497 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ToppingResDto@3c9fdbda]
+2020-03-10 21:00:27.498 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:27.498 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@5d0d1951] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.499 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:27.499 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:27.544 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@10a6ec8a] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.546 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@52a5b44f] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.549 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.549 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@10a6ec8a] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:27.651 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@10a6ec8a] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:27.654 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.655 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@52a5b44f] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.655 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@10a6ec8a] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.658 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:27.658 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:27.658 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:27.658 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@13a7c550
+2020-03-10 21:00:27.658 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:27.658 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/2'; against '/logout'
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'POST /logout'
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'PUT /logout'
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:27.659 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'DELETE /logout'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:27.660 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:27.661 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:27.661 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:27.661 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/2'; against '/v1/report/**'
+2020-03-10 21:00:27.661 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'POST /v1/product'
+2020-03-10 21:00:27.661 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:27.661 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:27.661 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/2' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:27.661 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:27.661 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/2 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:27.662 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ToppingControllerImpl#get(Long)
+2020-03-10 21:00:27.662 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@3edd8868] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.663 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:27.663 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@3edd8868] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.664 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@47c64c59] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.664 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.664 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.664 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.665 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.665 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.665 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@3edd8868] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.665 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+Hibernate: 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+2020-03-10 21:00:27.669 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.670 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.670 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@47c64c59] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.670 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:27.671 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:27.671 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ToppingResDto@65fbda02]
+2020-03-10 21:00:27.672 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:27.672 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@3edd8868] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.672 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:27.672 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:27.675 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:27.675 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:27.675 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:27.675 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@31df0035
+2020-03-10 21:00:27.675 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/disable/2' doesn't match 'GET /logout'
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/disable/2' doesn't match 'POST /logout'
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:27.676 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/disable/2' doesn't match 'PUT /logout'
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/disable/2' doesn't match 'DELETE /logout'
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:27.677 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:27.678 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/disable/2' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:27.678 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/topping/disable/2' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:27.678 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/disable/2'; against '/v1/topping/**'
+2020-03-10 21:00:27.678 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /v1/topping/disable/2; Attributes: [hasRole('ROLE_ADMIN')]
+2020-03-10 21:00:27.678 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN
+2020-03-10 21:00:27.678 DEBUG 10656 --- [    Test worker] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@469f2736, returned: 1
+2020-03-10 21:00:27.678 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-03-10 21:00:27.678 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-03-10 21:00:27.678 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/disable/2 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:27.679 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ToppingControllerImpl#disable(Long)
+2020-03-10 21:00:27.680 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@76f4d26c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.681 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:27.681 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@76f4d26c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.681 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@2954ff80] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.681 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.682 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.682 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.682 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.682 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.682 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@76f4d26c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.682 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+Hibernate: 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+2020-03-10 21:00:27.685 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.686 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.687 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@2954ff80] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.687 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:27.687 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@11c889c9] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:27.687 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@76f4d26c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.687 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@2c00b74a] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.688 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.688 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:27.688 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@76f4d26c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.688 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:27.689 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* update
+        com.starbux.entity.Topping */ update
+            topping 
+        set
+            topping_code=?,
+            enabled=?,
+            topping_name=?,
+            price=? 
+        where
+            id=?
+Hibernate: 
+    /* update
+        com.starbux.entity.Topping */ update
+            topping 
+        set
+            topping_code=?,
+            enabled=?,
+            topping_name=?,
+            price=? 
+        where
+            id=?
+2020-03-10 21:00:27.692 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.692 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@2c00b74a] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.692 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@11c889c9] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:27.693 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:27.693 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ToppingResDto@7662d61e]
+2020-03-10 21:00:27.694 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:27.694 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@76f4d26c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.695 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:27.695 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:27.700 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@444d8a19] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.700 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@1c406e0b] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.700 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.700 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@444d8a19] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:27.771 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@444d8a19] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:27.776 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.776 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@1c406e0b] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.776 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@444d8a19] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.779 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:27.779 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:27.779 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:27.779 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:27.780 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:27.780 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:27.780 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:27.780 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/1'; against '/logout'
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'POST /logout'
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PUT /logout'
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'DELETE /logout'
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:27.781 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:27.783 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@c826dade: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2020-03-10 21:00:27.783 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:27.783 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:27.783 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:27.783 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/1'; against '/v1/report/**'
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'POST /v1/product'
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/1' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:27.784 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/1 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:27.785 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ToppingControllerImpl#get(Long)
+2020-03-10 21:00:27.786 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@1703ba6a] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.787 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:27.787 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@1703ba6a] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.787 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@5c85d525] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.787 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.788 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.788 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.788 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.788 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:27.788 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@1703ba6a] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.788 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+Hibernate: 
+    select
+        topping0_.id as id1_5_0_,
+        topping0_.topping_code as topping_2_5_0_,
+        topping0_.enabled as enabled3_5_0_,
+        topping0_.topping_name as topping_4_5_0_,
+        topping0_.price as price5_5_0_ 
+    from
+        topping topping0_ 
+    where
+        topping0_.id=?
+2020-03-10 21:00:27.792 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:27.794 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.795 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@5c85d525] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.795 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@7ac83bb7] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:27.796 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:27.796 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ToppingResDto@4dba8d52]
+2020-03-10 21:00:27.797 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:27.797 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2020-03-10 21:00:27.797 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@1703ba6a] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.797 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:27.797 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:27.806 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@79bc4dec] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.807 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@57311fa1] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.807 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.807 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@79bc4dec] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:27.869 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@79bc4dec] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:27.872 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:27.872 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@57311fa1] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:27.872 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@79bc4dec] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:27.874 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:27.874 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:27.874 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/'; against '/logout'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'POST /logout'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'PUT /logout'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'DELETE /logout'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:27.875 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@c826dade: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/'; against '/v1/report/**'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'POST /v1/product'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:27.876 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/topping/' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:27.877 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:27.877 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:27.877 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ToppingControllerImpl#getAll()
+2020-03-10 21:00:27.877 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@2e68a406] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:27.878 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@98196f7] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] to thread [Test worker]
+2020-03-10 21:00:27.878 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@2e68a406] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:27.879 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@12497906] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:27.879 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:27.879 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2020-03-10 21:00:27.903 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@2e68a406] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.044 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@2e68a406] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.044 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@98196f7] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] bound to thread [Test worker]
+2020-03-10 21:00:28.044 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@98196f7] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] bound to thread [Test worker]
+2020-03-10 21:00:28.044 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@98196f7] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] bound to thread [Test worker]
+2020-03-10 21:00:28.045 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Topping as generatedAlias0 */ select
+            topping0_.id as id1_5_,
+            topping0_.topping_code as topping_2_5_,
+            topping0_.enabled as enabled3_5_,
+            topping0_.topping_name as topping_4_5_,
+            topping0_.price as price5_5_ 
+        from
+            topping topping0_
+Hibernate: 
+    /* select
+        generatedAlias0 
+    from
+        Topping as generatedAlias0 */ select
+            topping0_.id as id1_5_,
+            topping0_.topping_code as topping_2_5_,
+            topping0_.enabled as enabled3_5_,
+            topping0_.topping_name as topping_4_5_,
+            topping0_.price as price5_5_ 
+        from
+            topping topping0_
+2020-03-10 21:00:28.052 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2020-03-10 21:00:28.054 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.054 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@12497906] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.054 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@98196f7] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] from thread [Test worker]
+2020-03-10 21:00:28.055 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.057 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.starbux.dto.response.ToppingResDto@5ac8436e, com.starbux.dto.response.ToppingResDto@33eaf5b0, c (truncated)...]
+2020-03-10 21:00:28.060 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.060 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2020-03-10 21:00:28.060 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@2e68a406] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.060 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.060 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:28.069 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@31ff3af5] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.070 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@4d5b28a] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.070 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.070 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@31ff3af5] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.117 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@31ff3af5] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.120 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.120 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@4d5b28a] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.121 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@31ff3af5] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.123 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@530b240b
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.124 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'GET /logout'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/'; against '/logout'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/'; against '/v1/topping'
+2020-03-10 21:00:28.125 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.126 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:28.126 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.126 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'GET /v1/report/**'
+2020-03-10 21:00:28.126 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/topping/'; against '/v1/product'
+2020-03-10 21:00:28.126 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.126 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:28.126 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/topping/' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:28.126 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:28.126 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/topping/ reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.127 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ToppingControllerImpl#create(ToppingReqDto)
+2020-03-10 21:00:28.127 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@69900d24] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.128 DEBUG 10656 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read &quot;application/json;charset=UTF-8&quot; to [com.starbux.dto.request.ToppingReqDto@2170aa71]
+2020-03-10 21:00:28.128 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@11c889c9] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.128 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@69900d24] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.128 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@8180d37] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.129 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.129 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.129 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@69900d24] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.136 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* insert com.starbux.entity.Topping
+        */ insert 
+        into
+            topping
+            (topping_code, enabled, topping_name, price) 
+        values
+            (?, ?, ?, ?)
+Hibernate: 
+    /* insert com.starbux.entity.Topping
+        */ insert 
+        into
+            topping
+            (topping_code, enabled, topping_name, price) 
+        values
+            (?, ?, ?, ?)
+2020-03-10 21:00:28.143 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.145 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.145 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@8180d37] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.145 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@11c889c9] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.146 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.146 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ToppingResDto@5040f2cf]
+2020-03-10 21:00:28.146 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.147 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@69900d24] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.147 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.147 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at Mar 10, 2020, 9:00:29 PM</p>
+</div>
+</div>
+</body>
+</html>

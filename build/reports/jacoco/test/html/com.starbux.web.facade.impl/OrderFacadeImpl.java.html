@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OrderFacadeImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">starbux-api</a> &gt; <a href="index.source.html" class="el_package">com.starbux.web.facade.impl</a> &gt; <span class="el_source">OrderFacadeImpl.java</span></div><h1>OrderFacadeImpl.java</h1><pre class="source lang-java linenums">package com.starbux.web.facade.impl;
+
+import com.starbux.dto.request.OrderRequestDto;
+import com.starbux.dto.request.UserReqDto;
+import com.starbux.dto.response.OrderResponseDto;
+import com.starbux.enums.Command;
+import com.starbux.web.facade.IOrderFacade;
+import com.starbux.web.service.IOrderService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
+@Service
+<span class="fc" id="L16">public class OrderFacadeImpl implements IOrderFacade {</span>
+
+	@Autowired
+	private IOrderService&lt;OrderRequestDto, OrderResponseDto&gt; orderService;
+
+	@Override
+	public Optional getOrder(Long id) {
+<span class="nc" id="L23">		return orderService.getOrder(id);</span>
+	}
+
+	@Override
+	public Optional&lt;Boolean&gt; deleteOrder(Long id) {
+<span class="nc" id="L28">		return orderService.deleteOrder(id);</span>
+	}
+
+	@Override
+	public Optional productOrder(Long cartId, Command command, Long id) {
+<span class="nc" id="L33">		orderService.productOrder(cartId, command, id);</span>
+<span class="nc" id="L34">		return orderService.updateCart(cartId);</span>
+	}
+
+	@Override
+	public Optional toppingOrder(Long cartId, Long productId, Command command, Long id) {
+<span class="nc" id="L39">		orderService.toppingOrder(cartId, productId, command, id);</span>
+<span class="nc" id="L40">		return orderService.updateCart(cartId);</span>
+	}
+
+	@Override
+	public Optional confirmOrder(Long id) {
+<span class="nc" id="L45">		return orderService.confirmOrder(id);</span>
+	}
+
+	@Override
+	public Optional initiateOrder(UserReqDto reqDto) {
+<span class="nc" id="L50">		return orderService.initiateOrder(reqDto);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

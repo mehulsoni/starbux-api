@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculationUtility.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">starbux-api</a> &gt; <a href="index.source.html" class="el_package">com.starbux.util</a> &gt; <span class="el_source">CalculationUtility.java</span></div><h1>CalculationUtility.java</h1><pre class="source lang-java linenums">package com.starbux.util;
+
+import com.starbux.entity.OrderProduct;
+import com.starbux.entity.OrderTopping;
+
+import org.apache.commons.collections4.CollectionUtils;
+
+import java.util.List;
+
+public class CalculationUtility {
+
+	private CalculationUtility() {
+		super();
+	}
+
+	public static Double sum(List&lt;OrderProduct&gt; orderProduct) {
+<span class="nc bnc" id="L17" title="All 2 branches missed.">		if (CollectionUtils.isNotEmpty(orderProduct)) {</span>
+<span class="nc" id="L18">			return orderProduct.stream()</span>
+<span class="nc" id="L19">					.map(x -&gt; calculateToppingPrice(x.getOrderToppings()) + calculateDrinkPrice(x))</span>
+<span class="nc" id="L20">					.reduce(0.0, Double::sum);</span>
+		} else {
+<span class="nc" id="L22">			return 0.0;</span>
+		}
+	}
+
+	private static Double calculateToppingPrice(List&lt;OrderTopping&gt; oToppings) {
+<span class="nc bnc" id="L27" title="All 2 branches missed.">		if (CollectionUtils.isNotEmpty(oToppings)) {</span>
+<span class="nc" id="L28">			return</span>
+<span class="nc" id="L29">					oToppings.stream()</span>
+<span class="nc" id="L30">							.map(c -&gt; c.getTopping().getPrice())</span>
+<span class="nc" id="L31">							.reduce(0.0, Double::sum);</span>
+		} else {
+<span class="nc" id="L33">			return 0.0;</span>
+		}
+	}
+
+	private static double calculateDrinkPrice(OrderProduct x) {
+<span class="nc bnc" id="L38" title="All 4 branches missed.">		if (null != x &amp;&amp; null != x.getProduct()) {</span>
+<span class="nc" id="L39">			return x.getProduct().getPrice();</span>
+		} else {
+<span class="nc" id="L41">			return 0.0;</span>
+		}
+	}
+
+	public static double discount(List&lt;OrderProduct&gt; orderProducts) {
+<span class="nc bnc" id="L46" title="All 2 branches missed.">		if (CollectionUtils.isNotEmpty(orderProducts)) {</span>
+<span class="nc" id="L47">			Double discount = applyPercentDiscount(orderProducts, 12.0, 25);</span>
+<span class="nc" id="L48">			return applyNumberOfDrinkDiscount(discount, orderProducts, 3);</span>
+		} else {
+<span class="nc" id="L50">			return 0.0;</span>
+		}
+	}
+
+	private static double applyPercentDiscount(List&lt;OrderProduct&gt; orderProducts,
+	                                           double offerPrice,
+	                                           double percentage) {
+<span class="nc" id="L57">		double sum = sum(orderProducts);</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">		if (sum &gt; offerPrice) {</span>
+<span class="nc" id="L59">			return calculatePercentage(percentage, sum);</span>
+		}
+<span class="nc" id="L61">		return 0.0;</span>
+	}
+
+	private static double calculatePercentage(double percentage, double sum) {
+<span class="nc" id="L65">		return ((percentage * sum) / 100);</span>
+	}
+
+	private static double applyNumberOfDrinkDiscount(Double discount, List&lt;OrderProduct&gt; orderProducts, int numberOfDrinksAllowed) {
+<span class="nc bnc" id="L69" title="All 4 branches missed.">		if (CollectionUtils.isNotEmpty(orderProducts) &amp;&amp; orderProducts.size() &gt;= numberOfDrinksAllowed) {</span>
+<span class="nc" id="L70">			return Math.min(discount, min(orderProducts));</span>
+		}
+<span class="nc" id="L72">		return discount;</span>
+	}
+
+	private static Double min(List&lt;OrderProduct&gt; orderProducts) {
+<span class="nc bnc" id="L76" title="All 2 branches missed.">		if (CollectionUtils.isNotEmpty(orderProducts)) {</span>
+<span class="nc" id="L77">			return orderProducts</span>
+<span class="nc" id="L78">					.stream()</span>
+<span class="nc" id="L79">					.map(x -&gt; (calculateToppingPrice(x.getOrderToppings()) + calculateDrinkPrice(x)))</span>
+<span class="nc" id="L80">					.reduce(Double.MAX_VALUE, Double::min);</span>
+		} else {
+<span class="nc" id="L82">			return Double.MIN_VALUE;</span>
+		}
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

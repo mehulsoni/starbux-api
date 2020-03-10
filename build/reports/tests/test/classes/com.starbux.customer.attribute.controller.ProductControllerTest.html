@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ProductControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ProductControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.starbux.customer.attribute.controller.html">com.starbux.customer.attribute.controller</a> &gt; ProductControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.466s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">create_NewProduct()</td>
+<td class="success">0.067s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">disable_Product()</td>
+<td class="success">0.083s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">enable_Product()</td>
+<td class="success">0.093s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProduct_byId()</td>
+<td class="success">0.077s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">get_All_Product()</td>
+<td class="success">0.070s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update_NewProduct()</td>
+<td class="success">0.076s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2020-03-10 21:00:28.157  INFO 10656 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.starbux.customer.attribute.controller.ProductControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-03-10 21:00:28.157  INFO 10656 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.starbux.customer.attribute.controller.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-03-10 21:00:28.161  INFO 10656 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.starbux.StartBuxApplication for test class com.starbux.customer.attribute.controller.ProductControllerTest
+2020-03-10 21:00:28.162  INFO 10656 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-03-10 21:00:28.163  INFO 10656 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7bbc712d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6dc3f791, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@527a5bd8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@320611b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b0d5d4b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@69004ec4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@69246ca7, org.springframework.test.context.event.EventPublishingTestExecutionListener@698cf021, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@189a0f5e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@730714e7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@390c1f74, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@378ffd8c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7fa7e4dc, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@34cc77e3]
+2020-03-10 21:00:28.167 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@65884b7d] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.167 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@32ac5b40] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.167 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.167 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@65884b7d] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.205 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@65884b7d] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.208 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.208 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@32ac5b40] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.208 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@65884b7d] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.212 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.212 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@4e7fc315
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'GET /logout'
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/'; against '/logout'
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.213 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/'; against '/v1/topping'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'GET /v1/report/**'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/'; against '/v1/product'
+2020-03-10 21:00:28.214 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.215 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:28.215 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /v1/product/' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:28.215 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:28.215 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.215 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ProductControllerImpl#create(ProductReqDto)
+2020-03-10 21:00:28.215 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@258df9fc] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.218 DEBUG 10656 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read &quot;application/json;charset=UTF-8&quot; to [com.starbux.dto.request.ProductReqDto@2798d93]
+2020-03-10 21:00:28.218 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@525fa0c7] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.220 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@258df9fc] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.220 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@1f2cfd13] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.220 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.220 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.222 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@258df9fc] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.222 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* insert com.starbux.entity.Product
+        */ insert 
+        into
+            product
+            (product_code, enabled, product_name, price) 
+        values
+            (?, ?, ?, ?)
+Hibernate: 
+    /* insert com.starbux.entity.Product
+        */ insert 
+        into
+            product
+            (product_code, enabled, product_name, price) 
+        values
+            (?, ?, ?, ?)
+2020-03-10 21:00:28.225 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.227 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.227 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@1f2cfd13] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.227 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@525fa0c7] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.228 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.229 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ProductResDto@54579521]
+2020-03-10 21:00:28.230 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.230 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@258df9fc] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.230 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.230 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:28.236 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@404a4069] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.236 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@674e9909] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.236 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.236 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@404a4069] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.290 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@404a4069] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.293 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.294 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@674e9909] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.294 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@404a4069] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.296 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.296 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.296 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.296 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.296 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.296 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/1'; against '/logout'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'POST /logout'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@c826dade: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/1'; against '/v1/report/**'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'POST /v1/product'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:28.297 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.298 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ProductControllerImpl#get(Long)
+2020-03-10 21:00:28.299 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@2997f76c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.300 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.300 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@2997f76c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.300 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@56f536f2] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.301 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.301 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.301 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.301 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.301 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.301 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@2997f76c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.302 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+Hibernate: 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+2020-03-10 21:00:28.304 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.306 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.306 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@56f536f2] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.306 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.306 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.307 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ProductResDto@5d4a6e80]
+2020-03-10 21:00:28.307 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.307 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2020-03-10 21:00:28.308 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@2997f76c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.308 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.308 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:28.314 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@a6361a1] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.315 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@147eada9] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.315 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.315 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@a6361a1] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.370 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@a6361a1] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.373 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.373 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@147eada9] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.373 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@a6361a1] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@1a4effc8
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/3'; against '/logout'
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'POST /logout'
+2020-03-10 21:00:28.375 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/3'; against '/v1/report/**'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'POST /v1/product'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/3' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:28.376 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/3 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.377 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ProductControllerImpl#get(Long)
+2020-03-10 21:00:28.377 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@29a04b46] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.378 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.378 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@29a04b46] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.378 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@38df49ba] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.378 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.378 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.378 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.378 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.378 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.378 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@29a04b46] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.379 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+Hibernate: 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+2020-03-10 21:00:28.388 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.389 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.389 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@38df49ba] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.389 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.389 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.389 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ProductResDto@588bce86]
+2020-03-10 21:00:28.390 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.390 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@29a04b46] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.390 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.390 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:28.391 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@1a5f6aac
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'GET /logout'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'POST /logout'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.392 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/enable/3'; against '/v1/topping/**'
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'GET /v1/report/**'
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'POST /v1/product'
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/enable/3' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/enable/3'; against '/v1/product/**'
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /v1/product/enable/3; Attributes: [hasRole('ROLE_ADMIN')]
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@469f2736, returned: 1
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-03-10 21:00:28.393 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/enable/3 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.394 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ProductControllerImpl#enable(Long)
+2020-03-10 21:00:28.394 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@b7396fd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.394 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.394 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@b7396fd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.395 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@d0a96eb] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.395 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.395 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.395 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.395 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.395 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.395 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@b7396fd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.395 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+Hibernate: 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+2020-03-10 21:00:28.397 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.398 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.399 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@d0a96eb] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.399 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.399 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@525fa0c7] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.399 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@b7396fd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.399 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@4b616900] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.399 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.399 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.399 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@b7396fd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.399 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.400 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* update
+        com.starbux.entity.Product */ update
+            product 
+        set
+            product_code=?,
+            enabled=?,
+            product_name=?,
+            price=? 
+        where
+            id=?
+Hibernate: 
+    /* update
+        com.starbux.entity.Product */ update
+            product 
+        set
+            product_code=?,
+            enabled=?,
+            product_name=?,
+            price=? 
+        where
+            id=?
+2020-03-10 21:00:28.402 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.402 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@4b616900] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.402 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@525fa0c7] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.403 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.403 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ProductResDto@20b3465e]
+2020-03-10 21:00:28.403 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.403 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@b7396fd] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.404 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.404 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:28.409 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@127d0981] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.409 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@7cf284c1] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.409 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.409 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@127d0981] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.451 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@127d0981] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.454 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.454 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@7cf284c1] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.454 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@127d0981] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.456 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.456 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.456 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@4c39b542
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/1'; against '/logout'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'POST /logout'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.457 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/1'; against '/v1/report/**'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'POST /v1/product'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/1' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:28.458 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/1 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.459 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ProductControllerImpl#get(Long)
+2020-03-10 21:00:28.459 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@76028b2d] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.460 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.460 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@76028b2d] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.460 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@cc9a56d] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.460 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.460 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.460 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.460 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.460 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.460 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@76028b2d] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.461 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+Hibernate: 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+2020-03-10 21:00:28.463 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.464 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.465 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@cc9a56d] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.465 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.465 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.465 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ProductResDto@46fd5df9]
+2020-03-10 21:00:28.465 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.466 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@76028b2d] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.466 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.466 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:28.467 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@56acf709
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'GET /logout'
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'POST /logout'
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.468 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/'; against '/v1/topping/**'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'GET /v1/report/**'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'POST /v1/product'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/'; against '/v1/product/**'
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /v1/product/; Attributes: [hasRole('ROLE_ADMIN')]
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@469f2736, returned: 1
+2020-03-10 21:00:28.469 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-03-10 21:00:28.470 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-03-10 21:00:28.470 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.470 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ProductControllerImpl#update(ProductReqDto)
+2020-03-10 21:00:28.470 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@2293549c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.471 DEBUG 10656 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read &quot;application/json;charset=UTF-8&quot; to [com.starbux.dto.request.ProductReqDto@eadc7a2]
+2020-03-10 21:00:28.471 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@525fa0c7] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.471 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@2293549c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.472 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@30b844e5] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.472 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.472 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.472 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@2293549c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.472 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* load com.starbux.entity.Product */ select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+Hibernate: 
+    /* load com.starbux.entity.Product */ select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+2020-03-10 21:00:28.475 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.475 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* update
+        com.starbux.entity.Product */ update
+            product 
+        set
+            product_code=?,
+            enabled=?,
+            product_name=?,
+            price=? 
+        where
+            id=?
+Hibernate: 
+    /* update
+        com.starbux.entity.Product */ update
+            product 
+        set
+            product_code=?,
+            enabled=?,
+            product_name=?,
+            price=? 
+        where
+            id=?
+2020-03-10 21:00:28.479 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.479 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@30b844e5] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.479 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@525fa0c7] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.480 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.480 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ProductResDto@1bae0fe0]
+2020-03-10 21:00:28.481 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.481 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@2293549c] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.481 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.481 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:28.486 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@26ec91a7] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.486 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@3515565e] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.486 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.486 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@26ec91a7] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.534 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@26ec91a7] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.537 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.537 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@3515565e] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.537 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@26ec91a7] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@50727aa1
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/2'; against '/logout'
+2020-03-10 21:00:28.540 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'POST /logout'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/2'; against '/v1/report/**'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'POST /v1/product'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/2' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:28.541 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/2 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.542 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ProductControllerImpl#get(Long)
+2020-03-10 21:00:28.543 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@4fca6157] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.543 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.543 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@4fca6157] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.543 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@6d0a53c0] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.543 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.543 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.543 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.543 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.543 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.544 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@4fca6157] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.544 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+Hibernate: 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+2020-03-10 21:00:28.546 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.547 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.548 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@6d0a53c0] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.548 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.548 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.548 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ProductResDto@787d2337]
+2020-03-10 21:00:28.549 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.549 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@4fca6157] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.549 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.549 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:28.550 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.550 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.550 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : HttpSession being created as SecurityContext is non-default
+2020-03-10 21:00:28.550 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN' stored to HttpSession: 'org.springframework.mock.web.MockHttpSession@4204c2c
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@81c98b2: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'GET /logout'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'POST /logout'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/disable/2'; against '/v1/topping/**'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'GET /v1/report/**'
+2020-03-10 21:00:28.551 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'POST /v1/product'
+2020-03-10 21:00:28.552 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'PATCH /v1/product/disable/2' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.552 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/disable/2'; against '/v1/product/**'
+2020-03-10 21:00:28.552 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /v1/product/disable/2; Attributes: [hasRole('ROLE_ADMIN')]
+2020-03-10 21:00:28.552 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@81c98b2: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_ADMIN
+2020-03-10 21:00:28.552 DEBUG 10656 --- [    Test worker] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@469f2736, returned: 1
+2020-03-10 21:00:28.552 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-03-10 21:00:28.552 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-03-10 21:00:28.552 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/disable/2 reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.552 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ProductControllerImpl#disable(Long)
+2020-03-10 21:00:28.553 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@16d6a6a7] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.553 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.553 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@16d6a6a7] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.553 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@7a35bd1] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.553 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.553 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.554 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.554 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.554 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] bound to thread [Test worker]
+2020-03-10 21:00:28.554 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@16d6a6a7] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.554 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+Hibernate: 
+    select
+        product0_.id as id1_3_0_,
+        product0_.product_code as product_2_3_0_,
+        product0_.enabled as enabled3_3_0_,
+        product0_.product_name as product_4_3_0_,
+        product0_.price as price5_3_0_ 
+    from
+        product product0_ 
+    where
+        product0_.id=?
+2020-03-10 21:00:28.556 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2020-03-10 21:00:28.557 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.557 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@7a35bd1] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.558 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@404f9500] for key [public abstract java.util.Optional org.springframework.data.repository.CrudRepository.findById(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.558 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@525fa0c7] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] to thread [Test worker]
+2020-03-10 21:00:28.558 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@16d6a6a7] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.558 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@2151395c] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.558 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.558 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.558 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@16d6a6a7] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.558 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2020-03-10 21:00:28.559 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* update
+        com.starbux.entity.Product */ update
+            product 
+        set
+            product_code=?,
+            enabled=?,
+            product_name=?,
+            price=? 
+        where
+            id=?
+Hibernate: 
+    /* update
+        com.starbux.entity.Product */ update
+            product 
+        set
+            product_code=?,
+            enabled=?,
+            product_name=?,
+            price=? 
+        where
+            id=?
+2020-03-10 21:00:28.562 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.562 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@2151395c] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.562 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@525fa0c7] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] from thread [Test worker]
+2020-03-10 21:00:28.562 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.562 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.starbux.dto.response.ProductResDto@5dcb1453]
+2020-03-10 21:00:28.563 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.563 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@16d6a6a7] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.563 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.563 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-03-10 21:00:28.570 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@5a9b63e9] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.570 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@74d8d4d0] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.570 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.570 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@5a9b63e9] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.611 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@5a9b63e9] for key [HikariDataSource (db-conn-pool)] bound to thread [Test worker]
+2020-03-10 21:00:28.614 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.614 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@74d8d4d0] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.614 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@5a9b63e9] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/'; against '/logout'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'POST /logout'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'PUT /logout'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'DELETE /logout'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 5 of 11 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.w.s.HttpSessionRequestCache        : saved request doesn't match
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@c826dade: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-03-10 21:00:28.616 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'POST /v1/topping'
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'PUT /v1/topping/**'
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'PATCH /v1/topping/**'
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'DELETE /v1/topping/**'
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/v1/product/'; against '/v1/report/**'
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'POST /v1/product'
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'PUT /v1/product/**'
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'PATCH /v1/product/**'
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /v1/product/' doesn't match 'DELETE /v1/product/**'
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.s.w.a.i.FilterSecurityInterceptor    : Public object - authentication not attempted
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] o.s.security.web.FilterChainProxy        : /v1/product/ reached end of additional filter chain; proceeding with original chain
+2020-03-10 21:00:28.617 DEBUG 10656 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.starbux.web.controller.impl.ProductControllerImpl#getAll()
+2020-03-10 21:00:28.617 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@d8b9198] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] to thread [Test worker]
+2020-03-10 21:00:28.618 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@3fda4acf] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] to thread [Test worker]
+2020-03-10 21:00:28.618 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@d8b9198] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.618 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@3edfe2f6] for key [HikariDataSource (db-conn-pool)] to thread [Test worker]
+2020-03-10 21:00:28.618 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2020-03-10 21:00:28.618 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2020-03-10 21:00:28.619 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@d8b9198] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.628 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@d8b9198] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] bound to thread [Test worker]
+2020-03-10 21:00:28.628 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@3fda4acf] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] bound to thread [Test worker]
+2020-03-10 21:00:28.628 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@3fda4acf] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] bound to thread [Test worker]
+2020-03-10 21:00:28.628 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@3fda4acf] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] bound to thread [Test worker]
+2020-03-10 21:00:28.628 DEBUG 10656 --- [    Test worker] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Product as generatedAlias0 */ select
+            product0_.id as id1_3_,
+            product0_.product_code as product_2_3_,
+            product0_.enabled as enabled3_3_,
+            product0_.product_name as product_4_3_,
+            product0_.price as price5_3_ 
+        from
+            product product0_
+Hibernate: 
+    /* select
+        generatedAlias0 
+    from
+        Product as generatedAlias0 */ select
+            product0_.id as id1_3_,
+            product0_.product_code as product_2_3_,
+            product0_.enabled as enabled3_3_,
+            product0_.product_name as product_4_3_,
+            product0_.price as price5_3_ 
+        from
+            product product0_
+2020-03-10 21:00:28.632 TRACE 10656 --- [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2020-03-10 21:00:28.633 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2020-03-10 21:00:28.634 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@3edfe2f6] for key [HikariDataSource (db-conn-pool)] from thread [Test worker]
+2020-03-10 21:00:28.634 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@3fda4acf] for key [public abstract java.util.List org.springframework.data.jpa.repository.JpaRepository.findAll()] from thread [Test worker]
+2020-03-10 21:00:28.634 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2020-03-10 21:00:28.634 DEBUG 10656 --- [    Test worker] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.starbux.dto.response.ProductResDto@a36dd89, com.starbux.dto.response.ProductResDto@1737de6d, co (truncated)...]
+2020-03-10 21:00:28.635 DEBUG 10656 --- [    Test worker] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@561781a0
+2020-03-10 21:00:28.636 DEBUG 10656 --- [    Test worker] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2020-03-10 21:00:28.636 TRACE 10656 --- [    Test worker] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@d8b9198] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@7c80dc92] from thread [Test worker]
+2020-03-10 21:00:28.636 DEBUG 10656 --- [    Test worker] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-03-10 21:00:28.636 DEBUG 10656 --- [    Test worker] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at Mar 10, 2020, 9:00:29 PM</p>
+</div>
+</div>
+</body>
+</html>

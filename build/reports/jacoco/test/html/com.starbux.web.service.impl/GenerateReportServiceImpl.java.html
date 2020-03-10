@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GenerateReportServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">starbux-api</a> &gt; <a href="index.source.html" class="el_package">com.starbux.web.service.impl</a> &gt; <span class="el_source">GenerateReportServiceImpl.java</span></div><h1>GenerateReportServiceImpl.java</h1><pre class="source lang-java linenums">package com.starbux.web.service.impl;
+
+import com.starbux.entity.OrderPerCustomerReportDto;
+import com.starbux.entity.User;
+import com.starbux.exception.ReportGenerationException;
+import com.starbux.web.mapper.IUserMapper;
+import com.starbux.web.repository.IUserRepository;
+import com.starbux.web.service.IGenerateReportService;
+
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+
+import org.apache.commons.collections4.CollectionUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
+
+@Service
+<span class="fc" id="L33">public class GenerateReportServiceImpl implements IGenerateReportService {</span>
+
+	@Autowired
+	private IUserRepository userRepository;
+
+	@Autowired
+	private IUserMapper userMapper;
+
+	@Override
+	public Optional&lt;byte[]&gt; reportOrderPerCustomer() {
+<span class="nc" id="L43">		final InputStream stream = this.getClass().getResourceAsStream(&quot;/report.jrxml&quot;);</span>
+		try {
+<span class="nc" id="L45">			final JasperReport report = JasperCompileManager.compileReport(stream);</span>
+<span class="nc" id="L46">			final JRBeanCollectionDataSource source = new JRBeanCollectionDataSource(getCartOrderForReporting());</span>
+<span class="nc" id="L47">			final Map&lt;String, Object&gt; parameters = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L48">			parameters.put(&quot;createdBy&quot;, &quot;starbux.com&quot;);</span>
+<span class="nc" id="L49">			final JasperPrint print = JasperFillManager.fillReport(report, parameters, source);</span>
+<span class="nc" id="L50">			return Optional.ofNullable(JasperExportManager.exportReportToPdf(print));</span>
+<span class="nc" id="L51">		} catch (JRException e) {</span>
+<span class="nc" id="L52">			throw new ReportGenerationException(&quot;Exception while generating report&quot;, e);</span>
+		} finally {
+			try {
+<span class="nc" id="L55">				stream.close();</span>
+<span class="nc" id="L56">			} catch (IOException exception) {</span>
+<span class="nc" id="L57">				throw new ReportGenerationException(&quot;Exception while generating report&quot;, exception);</span>
+<span class="nc" id="L58">			}</span>
+<span class="nc" id="L59">			Optional.empty();</span>
+		}
+	}
+
+	private List&lt;OrderPerCustomerReportDto&gt; getCartOrderForReporting() {
+<span class="nc" id="L64">		List&lt;User&gt; users = userRepository.findAll();</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">		if (CollectionUtils.isNotEmpty(users)) {</span>
+<span class="nc" id="L66">			List&lt;OrderPerCustomerReportDto&gt; perCustomerReportDtoList = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L67">			AtomicInteger atomicInteger = new AtomicInteger(1);</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">			for (User user : users) {</span>
+<span class="nc" id="L69">				OrderPerCustomerReportDto orderPerCustomerReportDto = new OrderPerCustomerReportDto();</span>
+<span class="nc" id="L70">				orderPerCustomerReportDto.setAmount(user.getOrders()</span>
+<span class="nc" id="L71">						.stream()</span>
+<span class="nc" id="L72">						.map(x -&gt; x.getAmount().doubleValue())</span>
+<span class="nc" id="L73">						.reduce(0.0, Double::sum));</span>
+<span class="nc" id="L74">				orderPerCustomerReportDto.setEmail(user.getEmail());</span>
+<span class="nc" id="L75">				orderPerCustomerReportDto.setName(user.getFirstName(), user.getLastName());</span>
+<span class="nc" id="L76">				orderPerCustomerReportDto.setId(atomicInteger.getAndAdd(1));</span>
+<span class="nc" id="L77">				perCustomerReportDtoList.add(orderPerCustomerReportDto);</span>
+<span class="nc" id="L78">			}</span>
+<span class="nc" id="L79">			return perCustomerReportDtoList;</span>
+		}
+<span class="nc" id="L81">		return Collections.EMPTY_LIST;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OrderResponseDto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">starbux-api</a> &gt; <a href="index.source.html" class="el_package">com.starbux.dto.response</a> &gt; <span class="el_source">OrderResponseDto.java</span></div><h1>OrderResponseDto.java</h1><pre class="source lang-java linenums">package com.starbux.dto.response;
+
+import com.starbux.dto.request.UserReqDto;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.List;
+
+<span class="nc" id="L9">public class OrderResponseDto {</span>
+
+	private Long id;
+	private BigDecimal amount;
+	private BigDecimal discount;
+	private Date date;
+	private UserReqDto user;
+
+	private List&lt;OrderProductResDto&gt; orderProducts;
+
+	public Long getId() {
+<span class="nc" id="L20">		return id;</span>
+	}
+
+	public void setId(Long id) {
+<span class="nc" id="L24">		this.id = id;</span>
+<span class="nc" id="L25">	}</span>
+
+	public BigDecimal getAmount() {
+<span class="nc" id="L28">		return amount;</span>
+	}
+
+	public void setAmount(BigDecimal amount) {
+<span class="nc" id="L32">		this.amount = amount;</span>
+<span class="nc" id="L33">	}</span>
+
+	public BigDecimal getDiscount() {
+<span class="nc" id="L36">		return discount;</span>
+	}
+
+	public void setDiscount(BigDecimal discount) {
+<span class="nc" id="L40">		this.discount = discount;</span>
+<span class="nc" id="L41">	}</span>
+
+	public Date getDate() {
+<span class="nc" id="L44">		return date;</span>
+	}
+
+	public void setDate(Date date) {
+<span class="nc" id="L48">		this.date = date;</span>
+<span class="nc" id="L49">	}</span>
+
+	public UserReqDto getUser() {
+<span class="nc" id="L52">		return user;</span>
+	}
+
+	public void setUser(UserReqDto user) {
+<span class="nc" id="L56">		this.user = user;</span>
+<span class="nc" id="L57">	}</span>
+
+	public List&lt;OrderProductResDto&gt; getOrderProducts() {
+<span class="nc" id="L60">		return orderProducts;</span>
+	}
+
+	public void setOrderProducts(List&lt;OrderProductResDto&gt; orderProducts) {
+<span class="nc" id="L64">		this.orderProducts = orderProducts;</span>
+<span class="nc" id="L65">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

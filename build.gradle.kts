@@ -64,7 +64,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-security")
-    implementation("org.springframework.security:spring-security-test:5.2.1.RELEASE")
+    implementation("org.springframework.security:spring-security-test:4.0.1.RELEASE")
     implementation("net.sf.jasperreports:jasperreports:6.11.0")
     implementation("com.lowagie:itext:2.1.7")
     implementation("org.springframework.plugin:spring-plugin-core:$springPluginVersion")

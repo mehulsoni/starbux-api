@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OrderTopping.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">starbux-api</a> &gt; <a href="index.source.html" class="el_package">com.starbux.entity</a> &gt; <span class="el_source">OrderTopping.java</span></div><h1>OrderTopping.java</h1><pre class="source lang-java linenums">package com.starbux.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = &quot;order_topping&quot;)
+<span class="fc" id="L14">public class OrderTopping {</span>
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@OneToOne
+	@JoinColumn(name = &quot;topping_id&quot;, referencedColumnName = &quot;id&quot;)
+	private Topping topping;
+
+	@ManyToOne
+	@JoinColumn(name = &quot;order_product_id&quot;)
+	private OrderProduct orderProduct;
+
+	public Long getId() {
+<span class="nc" id="L29">		return id;</span>
+	}
+
+	public void setId(Long id) {
+<span class="nc" id="L33">		this.id = id;</span>
+<span class="nc" id="L34">	}</span>
+
+	public Topping getTopping() {
+<span class="nc" id="L37">		return topping;</span>
+	}
+
+	public void setTopping(Topping topping) {
+<span class="nc" id="L41">		this.topping = topping;</span>
+<span class="nc" id="L42">	}</span>
+
+	public OrderProduct getOrderProduct() {
+<span class="nc" id="L45">		return orderProduct;</span>
+	}
+
+	public void setOrderProduct(OrderProduct orderProduct) {
+<span class="nc" id="L49">		this.orderProduct = orderProduct;</span>
+<span class="nc" id="L50">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
