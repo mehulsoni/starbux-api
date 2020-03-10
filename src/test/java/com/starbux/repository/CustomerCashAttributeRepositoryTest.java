@@ -1,4 +1,4 @@
-package com.starbux.customer.attribute.repository;
+package com.starbux.repository;
 
 import com.starbux.TestTag;
 import com.starbux.annotation.ApiDataJpaTest;

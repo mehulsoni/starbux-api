@@ -1,11 +1,12 @@
-package com.starbux.customer.attribute.controller;
+package com.starbux.controller;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.starbux.TestTag;
 import com.starbux.configuration.ApiIntegrationTest;
-import com.starbux.dto.request.ProductReqDto;
+import com.starbux.dto.request.ToppingReqDto;
 import com.starbux.dto.response.ProductResDto;
+import com.starbux.dto.response.ToppingResDto;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -28,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @Tag(TestTag.INTEGRATION_TEST)
 @ApiIntegrationTest
 @ActiveProfiles("INTEGRATIONTEST")
-class ProductControllerTest {
+class ToppingControllerTest {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -42,17 +43,17 @@ class ProductControllerTest {
 			"/data/sql/initial_setup.sql",
 			"/data/sql/initial_data.sql"
 	})
-	void getProduct_byId() throws Exception {
+	void getTopping_byId() throws Exception {
 		MvcResult mvcResult =
 				mockMvc.perform(
-						get("/v1/product/{id}",
+						get("/v1/topping/{id}",
 								1))
 						.andExpect(status().isOk()).andReturn();
-		ProductResDto productResDto =
+		ToppingResDto toppingResDto =
 				objectMapper.readValue(mvcResult.getResponse().getContentAsString(),
 						new TypeReference<>() {
 						});
-		assertEquals(1, productResDto.getId());
+		assertEquals(1, toppingResDto.getId());
 	}
 
 	@Test
@@ -61,30 +62,31 @@ class ProductControllerTest {
 			"/data/sql/initial_setup.sql",
 			"/data/sql/initial_data.sql"
 	})
-	void getProduct_byInvalidId_throwException() throws Exception {
-		mockMvc.perform(
-				get("/v1/product/{id}",
-						10))
-				.andExpect(status().isNotFound()).andReturn();
-
-	}
-
-	@Test
-	@Sql(scripts = {
-			"/data/sql/cleanup.sql",
-			"/data/sql/initial_setup.sql",
-			"/data/sql/initial_data.sql"
-	})
-	void get_All_Product() throws Exception {
+	void getTopping_byInvalidId_throwException() throws Exception {
 		MvcResult mvcResult =
 				mockMvc.perform(
-						get("/v1/product/"))
+						get("/v1/topping/{id}",
+								10))
+						.andExpect(status().isNotFound()).andReturn();
+	}
+
+	@Test
+	@Sql(scripts = {
+			"/data/sql/cleanup.sql",
+			"/data/sql/initial_setup.sql",
+			"/data/sql/initial_data.sql"
+	})
+	void get_All_Topping() throws Exception {
+		MvcResult mvcResult =
+				mockMvc.perform(
+						get("/v1/topping/"))
 						.andExpect(status().isOk()).andReturn();
-		List<ProductResDto> productResDto =
+		List<ProductResDto> toppingResDto =
 				objectMapper.readValue(mvcResult.getResponse().getContentAsString(),
 						new TypeReference<>() {
 						});
-		assertEquals(4, productResDto.size());
+
+		assertEquals(4, toppingResDto.size());
 	}
 
 	@Test
@@ -92,11 +94,12 @@ class ProductControllerTest {
 			"/data/sql/cleanup.sql",
 			"/data/sql/initial_setup.sql"
 	})
-	void get_All_Product_WhenNoData_throwException() throws Exception {
+	void get_All_Topping_WhenNoData_throwException() throws Exception {
 		mockMvc.perform(
-				get("/v1/product/"))
+				get("/v1/topping/"))
 				.andExpect(status().isNotFound()).andReturn();
 	}
+
 
 	@WithMockUser(roles = {"ADMIN"})
 	@Test
@@ -104,16 +107,16 @@ class ProductControllerTest {
 			"/data/sql/cleanup.sql",
 			"/data/sql/initial_setup.sql"
 	})
-	void create_NewProduct() throws Exception {
-		ProductReqDto productReqDto = new ProductReqDto();
-		productReqDto.setCode("TEST");
-		productReqDto.setEnabled(true);
-		productReqDto.setName("Test");
-		productReqDto.setPrice(0.01);
+	void create_NewTopping() throws Exception {
+		ToppingReqDto toppingReqDto = new ToppingReqDto();
+		toppingReqDto.setCode("TEST");
+		toppingReqDto.setEnabled(true);
+		toppingReqDto.setName("Test");
+		toppingReqDto.setPrice(0.01);
 		MvcResult mvcResult =
-				mockMvc.perform(post("/v1/product/")
+				mockMvc.perform(post("/v1/topping/")
 						.contentType(MediaType.APPLICATION_JSON)
-						.content(objectMapper.writeValueAsString(productReqDto)))
+						.content(objectMapper.writeValueAsString(toppingReqDto)))
 						.andExpect(status().isOk()).andReturn();
 
 		ProductResDto responseDto = objectMapper
@@ -123,24 +126,25 @@ class ProductControllerTest {
 		assertEquals(1, responseDto.getId());
 	}
 
+
 	@WithMockUser(roles = {"ADMIN"})
 	@Test
 	@Sql(scripts = {
 			"/data/sql/cleanup.sql",
 			"/data/sql/initial_setup.sql"
 	})
-	void create_NewProduct_withInvalidData_throwException() throws Exception {
-		ProductReqDto productReqDto = new ProductReqDto();
-		productReqDto.setCode(null);
-		productReqDto.setEnabled(true);
-		productReqDto.setName(null);
-		productReqDto.setPrice(0.01);
-		mockMvc.perform(post("/v1/product/")
+	void create_NewTopping_withInvalidData_throwException() throws Exception {
+		ToppingReqDto toppingReqDto = new ToppingReqDto();
+		toppingReqDto.setCode(null);
+		toppingReqDto.setEnabled(true);
+		toppingReqDto.setName(null);
+		toppingReqDto.setPrice(0.01);
+		mockMvc.perform(post("/v1/topping/")
 				.contentType(MediaType.APPLICATION_JSON)
-				.content(objectMapper.writeValueAsString(productReqDto)))
+				.content(objectMapper.writeValueAsString(toppingReqDto)))
 				.andExpect(status().isBadRequest()).andReturn();
-
 	}
+
 
 	@WithMockUser(roles = {"ADMIN"})
 	@Test
@@ -149,41 +153,41 @@ class ProductControllerTest {
 			"/data/sql/initial_setup.sql",
 			"/data/sql/initial_data.sql"
 	})
-	void update_NewProduct() throws Exception {
+	void update_NewTopping() throws Exception {
 
 		MvcResult mvcResultGet =
 				mockMvc.perform(
-						get("/v1/product/{id}",
+						get("/v1/topping/{id}",
 								1))
 						.andExpect(status().isOk()).andReturn();
-		ProductResDto productResDto =
+		ToppingResDto toppingResDto =
 				objectMapper.readValue(mvcResultGet.getResponse().getContentAsString(),
 						new TypeReference<>() {
 						});
-		assertEquals(1, productResDto.getId());
-		assertEquals("BLACK_COFFEE", productResDto.getCode());
+		assertEquals(1, toppingResDto.getId());
+		assertEquals("MILK", toppingResDto.getCode());
 
-		ProductReqDto productReqDto = new ProductReqDto();
-		productReqDto.setId(1L);
-		productReqDto.setCode("TEST");
-		productReqDto.setEnabled(true);
-		productReqDto.setName("Test");
-		productReqDto.setPrice(0.01);
+		ToppingReqDto toppingReqDto = new ToppingReqDto();
+		toppingReqDto.setId(1L);
+		toppingReqDto.setCode("TEST");
+		toppingReqDto.setEnabled(true);
+		toppingReqDto.setName("Test");
+		toppingReqDto.setPrice(0.01);
 		MvcResult mvcResult =
-				mockMvc.perform(patch("/v1/product/")
+				mockMvc.perform(patch("/v1/topping/")
 						.contentType(MediaType.APPLICATION_JSON)
-						.content(objectMapper.writeValueAsString(productReqDto)))
+						.content(objectMapper.writeValueAsString(toppingReqDto)))
 						.andExpect(status().isOk()).andReturn();
 
 		ProductResDto responseDto = objectMapper
 				.readValue(mvcResult.getResponse()
 						.getContentAsString(), ProductResDto.class);
+
 		assertEquals(1, responseDto.getId());
 		assertEquals("TEST", responseDto.getCode());
 
 	}
 
-
 	@WithMockUser(roles = {"ADMIN"})
 	@Test
 	@Sql(scripts = {
@@ -191,30 +195,32 @@ class ProductControllerTest {
 			"/data/sql/initial_setup.sql",
 			"/data/sql/initial_data.sql"
 	})
-	void enable_Product() throws Exception {
+	void enable_Topping() throws Exception {
 
 		MvcResult mvcResultGet =
 				mockMvc.perform(
-						get("/v1/product/{id}",
+						get("/v1/topping/{id}",
 								3))
 						.andExpect(status().isOk()).andReturn();
-		ProductResDto productResDto =
+		ToppingResDto toppingResDto =
 				objectMapper.readValue(mvcResultGet.getResponse().getContentAsString(),
 						new TypeReference<>() {
 						});
-		assertEquals(3, productResDto.getId());
-		assertEquals("MOCHA", productResDto.getCode());
-		assertEquals(false, productResDto.getEnabled());
+		assertEquals(3, toppingResDto.getId());
+		assertEquals("CHOCOLATE_SAUCE", toppingResDto.getCode());
+		assertEquals(false, toppingResDto.getEnabled());
+
 
 		MvcResult mvcResult =
-				mockMvc.perform(patch("/v1/product/enable/{id}", 3))
+				mockMvc.perform(patch("/v1/topping/enable/{id}", 3))
 						.andExpect(status().isOk()).andReturn();
 
 		ProductResDto responseDto = objectMapper
 				.readValue(mvcResult.getResponse()
 						.getContentAsString(), ProductResDto.class);
+
 		assertEquals(3, responseDto.getId());
-		assertEquals("MOCHA", responseDto.getCode());
+		assertEquals("CHOCOLATE_SAUCE", responseDto.getCode());
 		assertEquals(true, responseDto.getEnabled());
 	}
 
@@ -225,32 +231,32 @@ class ProductControllerTest {
 			"/data/sql/initial_setup.sql",
 			"/data/sql/initial_data.sql"
 	})
-	void disable_Product() throws Exception {
+	void disable_Topping() throws Exception {
 
 		MvcResult mvcResultGet =
 				mockMvc.perform(
-						get("/v1/product/{id}",
+						get("/v1/topping/{id}",
 								2))
 						.andExpect(status().isOk()).andReturn();
-		ProductResDto productResDto =
+		ToppingResDto toppingResDto =
 				objectMapper.readValue(mvcResultGet.getResponse().getContentAsString(),
 						new TypeReference<>() {
 						});
-		assertEquals(2, productResDto.getId());
-		assertEquals("LATTE", productResDto.getCode());
-		assertEquals(true, productResDto.getEnabled());
+		assertEquals(2, toppingResDto.getId());
+		assertEquals("HAZELNUT_SYRUP", toppingResDto.getCode());
+		assertEquals(true, toppingResDto.getEnabled());
+
 
 		MvcResult mvcResult =
-				mockMvc.perform(patch("/v1/product/disable/{id}", 2))
+				mockMvc.perform(patch("/v1/topping/disable/{id}", 2))
 						.andExpect(status().isOk()).andReturn();
 
 		ProductResDto responseDto = objectMapper
 				.readValue(mvcResult.getResponse()
 						.getContentAsString(), ProductResDto.class);
+
 		assertEquals(2, responseDto.getId());
-		assertEquals("LATTE", responseDto.getCode());
+		assertEquals("HAZELNUT_SYRUP", responseDto.getCode());
 		assertEquals(false, responseDto.getEnabled());
 	}
-
-
 }
