@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="false">
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <springProperty scope="context" name="activeProfile" source="spring.profiles.active"/>
+    <springProperty scope="context" name="rollbarToken" source="rollbar.token"/>
+
+    <appender name="JSON" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <includeCallerData>true</includeCallerData>
+            <includeContext>false</includeContext>
+            <writeVersionAsInteger>true</writeVersionAsInteger>
+        </encoder>
+    </appender>
+
+    <appender name="ROLLBAR" class="com.rollbar.logback.RollbarAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <accessToken>${rollbarToken}</accessToken>
+        <environment>${activeProfile}</environment>
+    </appender>
+
+    <springProfile name="DEV, TEST, UAT, PROD">
+        <root level="WARN">
+            <appender-ref ref="JSON"/>
+            <appender-ref ref="ROLLBAR"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="DOCKER, LOCAL, INTEGRATIONTEST">
+        <root level="WARN">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+
+    <shutdownHook class="ch.qos.logback.core.hook.DelayingShutdownHook"/>
+
+</configuration>

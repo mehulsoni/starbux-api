@@ -1,0 +1,13 @@
+db:
+  host:
+  port:
+  schema:
+  connection-params:
+  username:
+  password:
+
+spring:
+  jpa:
+    show-sql: true
+
+HOSTNAME: leader

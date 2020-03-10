@@ -1,0 +1,55 @@
+# ------------------------------------------------------------------------------
+# Spring defined properties
+
+# ------------------------------------------------------------------------------
+# Spring defined properties
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:32892/dev_test_starbux_db
+
+  flyway:
+    schemas: public
+    locations: filesystem:doc/flyway/test,filesystem:doc/flyway/migrations,filesystem:doc/flyway/archive,filesystem:doc/flyway/post_migrations
+
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+  hikari:
+    max-lifetime: 600000
+    pool-name: db-conn-pool
+    minimum-idle: 1
+    maximum-pool-size: 1
+    idle-timeout: 30000
+    connection-timeout: 10000
+    auto-commit: false
+    leak-detection-threshold: 120000
+
+logging:
+  level:
+    com.starbux: TRACE
+    org.springframework: INFO
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.session: INFO
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    org.springframework.transaction: TRACE
+    org.hibernate: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.stat: INFO
+    net.sf: OFF
+    org.springframework.aop.framework.CglibAopProxy: ERROR
+    org.flywaydb: TRACE
+
+elector:
+  url: http://localhost:4040
+
+# only for testing in real environment should be taken from system environment variables
+HOSTNAME: leader

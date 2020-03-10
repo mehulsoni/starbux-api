@@ -1,0 +1,11 @@
+db:
+  host: starbux.c9ix4hugapza.us-east-1.rds.amazonaws.com
+  port: 5432
+  database: starbux
+  connection-params: "autoReconnect=true&useUnicode=true&characterEncoding=UTF-8"
+  username: "starbux"
+  password: "starbux$cxntkp8lir2g"
+
+spring:
+  jpa:
+    show-sql: true
