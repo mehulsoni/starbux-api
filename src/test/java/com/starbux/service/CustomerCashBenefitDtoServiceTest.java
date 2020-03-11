@@ -1,4 +1,4 @@
-package com.starbux.customer.attribute.service;
+package com.starbux.service;
 
 import com.starbux.TestTag;
 import com.starbux.configuration.ApiIntegrationTest;

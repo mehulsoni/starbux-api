@@ -1,4 +1,4 @@
-package com.starbux.customer.attribute.controller;
+package com.starbux.controller;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -135,11 +135,12 @@ class ProductControllerTest {
 		productReqDto.setEnabled(true);
 		productReqDto.setName(null);
 		productReqDto.setPrice(0.01);
-		mockMvc.perform(post("/v1/product/")
+	MvcResult mvcResult =	mockMvc.perform(post("/v1/product/")
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(productReqDto)))
-				.andExpect(status().isBadRequest()).andReturn();
+				.andExpect(status().is5xxServerError()).andReturn();
 
+		assertEquals(500, mvcResult.getResponse().getStatus());
 	}
 
 	@WithMockUser(roles = {"ADMIN"})

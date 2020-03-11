@@ -3,7 +3,6 @@ package com.starbux.web.service.impl;
 import com.starbux.dto.request.ToppingReqDto;
 import com.starbux.dto.response.ToppingResDto;
 import com.starbux.entity.Topping;
-import com.starbux.exception.NotFoundException;
 import com.starbux.web.mapper.IToppingMapper;
 import com.starbux.web.repository.IToppingRepository;
 import com.starbux.web.service.IToppingService;
@@ -49,15 +48,11 @@ public class ToppingServiceImpl implements IToppingService<ToppingReqDto, Toppin
 
 	@Override
 	public Optional<List<ToppingResDto>> getAll() {
-		try {
-			List<Topping> toppings = toppingRepository.findAll();
-			if (CollectionUtils.isNotEmpty(toppings)) {
-				return Optional.of(transformToResponse(toppings));
-			}
-			return Optional.empty();
-		} catch (Exception ex) {
-			throw new NotFoundException("Not Found");
+		List<Topping> toppings = toppingRepository.findAll();
+		if (CollectionUtils.isNotEmpty(toppings)) {
+			return Optional.of(transformToResponse(toppings));
 		}
+		return Optional.empty();
 	}
 
 	@Override

@@ -3,7 +3,6 @@ package com.starbux.web.service.impl;
 import com.starbux.dto.request.ProductReqDto;
 import com.starbux.dto.response.ProductResDto;
 import com.starbux.entity.Product;
-import com.starbux.exception.NotFoundException;
 import com.starbux.web.mapper.IProductMapper;
 import com.starbux.web.repository.IProductRepository;
 import com.starbux.web.service.IProductService;
@@ -38,15 +37,11 @@ public class ProductServiceImpl implements IProductService<ProductReqDto, Produc
 
 	@Override
 	public Optional<ProductResDto> get(Long id) {
-		try {
-			Optional<Product> product = productRepository.findById(id);
-			if (product.isPresent()) {
-				return Optional.of(transformToResponse(product.get()));
-			}
-			return Optional.empty();
-		} catch (Exception e) {
-			throw new NotFoundException("Not Found");
+		Optional<Product> product = productRepository.findById(id);
+		if (product.isPresent()) {
+			return Optional.of(transformToResponse(product.get()));
 		}
+		return Optional.empty();
 	}
 
 	@Override
