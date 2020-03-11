@@ -34,7 +34,7 @@ val jacocoToolVersion by extra("0.8.4")
 val minimumOverallTestCoverage by extra(0.70.toBigDecimal())
 val minimumClassTestCoverage by extra(0.65.toBigDecimal())
 
-// Checkstyle
+//Checkstyle
 //val checkstyleVersion by extra("8.23")
 
 // Mapstruct
@@ -124,11 +124,10 @@ tasks.jacocoTestCoverageVerification {
             }
 
             excludes = listOf(
-                    "com.Starbux.StartBuxApplication",
+                    "*StartBuxApplication",
                     "*Dto*",
                     "*entity*",
                     "*mapper*",
-                    "*util*",
                     "*enums*",
                     "*exception*",
                     "*common*",
@@ -147,11 +146,10 @@ tasks.jacocoTestCoverageVerification {
             }
 
             excludes = listOf(
-                    "com.Starbux.StartBuxApplication",
+                    "*StartBuxApplication",
                     "*Dto*",
                     "*entity*",
                     "*mapper*",
-                    "*util*",
                     "*enums*",
                     "*exception*",
                     "*common*",
@@ -173,7 +171,6 @@ tasks.create<FlywayMigrateTask>("migrateLocal") {
 tasks.create<FlywayMigrateTask>("migrateDev") {
     configFiles = arrayOf("doc/flyway/flyway_DEV.conf")
 }
-
 
 jib {
     container {

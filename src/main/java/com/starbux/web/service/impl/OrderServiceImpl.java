@@ -59,9 +59,6 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used for getting order details based on cart id
-	 *
-	 * @param id
-	 * @return
 	 */
 	@Override
 
@@ -77,12 +74,8 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is user for deleting oder and its products and topping on cancelling order
-	 *
-	 * @param id
-	 * @return
 	 */
 	@Override
-
 	public Optional<Boolean> deleteOrder(Long id) {
 		if (orderRepository.existsById(id)) {
 			orderRepository.deleteById(id);
@@ -93,11 +86,7 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used for adding item based on type [PRODUCTS/TOPPINGS]
-	 *
-	 * @param cartId
-	 * @param command
-	 * @param id
-	 * @return
+	 * cartId command id
 	 */
 	@Override
 
@@ -115,16 +104,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 	}
 
 	/**
-	 * This method is used for removing item based on type [PRODUCTS/TOPPINGS]
-	 *
-	 * @param cartId
-	 * @param orderProductId
-	 * @param command
-	 * @param id
-	 * @return
+	 * This method is used for removing item based on type [PRODUCTS/TOPPINGS] cartId orderProductId command id
 	 */
 	@Override
-
 	public void toppingOrder(Long cartId, Long orderProductId, Command command, Long id) {
 		switch (command) {
 			case ADD:
@@ -140,10 +122,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used for adding topping into cart.
+	 * <p>
+	 * cartId orderProductId id
 	 *
-	 * @param cartId
-	 * @param orderProductId
-	 * @param id
 	 * @return
 	 */
 	private void addTopping(Long cartId, Long orderProductId, Long id) {
@@ -155,8 +136,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used to get OrderCart if exist else throw NotFoundException
+	 * <p>
+	 * cartId
 	 *
-	 * @param cartId
 	 * @return
 	 */
 
@@ -171,8 +153,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used to get OrderProduct if exist else throw NotFoundException
+	 * <p>
+	 * orderProductId
 	 *
-	 * @param orderProductId
 	 * @return
 	 */
 
@@ -187,8 +170,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used to get topping if exist else throw NotFoundException
+	 * <p>
+	 * id
 	 *
-	 * @param id
 	 * @return
 	 */
 	private Topping checkAndGetToppingIfExist(Long id) {
@@ -202,8 +186,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used to get product if exist else throw NotFoundException
+	 * <p>
+	 * id
 	 *
-	 * @param id
 	 * @return
 	 */
 	private Product checkAndGetProductIfExist(Long id) {
@@ -217,9 +202,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used to create Topping
+	 * <p>
+	 * orderProduct topping
 	 *
-	 * @param orderProduct
-	 * @param topping
 	 * @return
 	 */
 	private OrderTopping createTopping(OrderProduct orderProduct, Topping topping) {
@@ -231,9 +216,8 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used to get updated cart order and calculate amount and save into order cart table
-	 *
-	 * @param cartId
-	 * @return
+	 * <p>
+	 * cartId
 	 */
 	@Override
 	public Optional<OrderResponseDto> updateCart(Long cartId) {
@@ -245,9 +229,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used for adding product into cart.
+	 * <p>
+	 * cartId id
 	 *
-	 * @param cartId
-	 * @param id
 	 * @return
 	 */
 	private void addProduct(Long cartId, Long id) {
@@ -258,9 +242,8 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used for creating product
-	 *
-	 * @param orderCart
-	 * @param product
+	 * <p>
+	 * orderCart product
 	 */
 	private void createProduct(OrderCart orderCart, Product product) {
 		OrderProduct orderProduct = new OrderProduct();
@@ -271,10 +254,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used for removing topping from cart.
+	 * <p>
+	 * cartId orderProductId id
 	 *
-	 * @param cartId
-	 * @param orderProductId
-	 * @param id
 	 * @return
 	 */
 	private void removeTopping(Long cartId, Long orderProductId, Long id) {
@@ -285,9 +267,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used for removing product from cart.
+	 * <p>
+	 * cartId id
 	 *
-	 * @param cartId
-	 * @param id
 	 * @return
 	 */
 	private void removeProduct(Long cartId, Long id) {
@@ -296,10 +278,7 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 	}
 
 	/**
-	 * This method is used for confirming order and return discounted amount if applicable.
-	 *
-	 * @param id
-	 * @return
+	 * This method is used for confirming order and return discounted amount if applicable. id
 	 */
 	@Override
 
@@ -320,9 +299,6 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is used for initializing cart and save user details.
-	 *
-	 * @param requestDto
-	 * @return
 	 */
 	@Override
 
@@ -338,8 +314,9 @@ public class OrderServiceImpl implements IOrderService<OrderRequestDto, OrderRes
 
 	/**
 	 * This method is for map user request dto to entity.
+	 * <p>
+	 * userReqDto
 	 *
-	 * @param userReqDto
 	 * @return
 	 */
 	private User setUser(UserReqDto userReqDto) {

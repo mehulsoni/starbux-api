@@ -2,10 +2,10 @@ package com.starbux.dto.response;
 
 public class UserResDto {
 	private Long id;
-	private String firstName = "user";
-	private String lastName = "anonymous";
-	private String email = "test@starbux.com";
-	private Long mobile = 0000000000L;
+	private String firstName ;
+	private String lastName;
+	private String email;
+	private Long mobile;
 
 	public Long getId() {
 		return id;

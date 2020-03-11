@@ -22,7 +22,7 @@ public class DataSourceConfiguration {
 		/**
 		 * Inner class for initializing application context.
 		 *
-		 * @param configurableApplicationContext {@link ConfigurableApplicationContext}.
+		 * configurableApplicationContext {@link ConfigurableApplicationContext}.
 		 */
 		public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
 
