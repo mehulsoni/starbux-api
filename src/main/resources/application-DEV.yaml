@@ -1,10 +1,10 @@
 db:
-  host:
-  port:
-  schema:
-  connection-params:
-  username:
-  password:
+  host: localhost
+  port: 5432
+  database: starbux
+  connection-params: autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+  username: postgres
+  password: YourStrongPassw0rd
 
 spring:
   jpa:

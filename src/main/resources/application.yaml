@@ -9,12 +9,12 @@ api.info:
   url: www.starbux.com
 
 db:
-  host: <SET-DB-HOST>
-  port: <SET-DB-PORT>
-  database: <SET-DB>
-  connection-params: <SET-DB-CONNECTION-PARAMS>
-  username: <SET-DB-USERNAME>
-  password: <SET-DB-PASSWORD>
+  host: localhost
+  port: 5432
+  database: starbux
+  connection-params: autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+  username: postgres
+  password: YourStrongPassw0rd
 
 # ------------------------------------------------------------------------------
 # Spring defined properties

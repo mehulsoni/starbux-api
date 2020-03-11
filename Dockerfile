@@ -1,5 +1,5 @@
-FROM openjdk:8-jdk-alpine
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} starbux.jar
+FROM openjdk:latest
+
+COPY build/libs/*.jar starbux.jar
 EXPOSE 6002
-ENTRYPOINT ["java","-jar","/starbux.jar"]
+ENTRYPOINT ["java", "-Dspring.profiles.active=LOCAL","-jar","/starbux.jar"]
