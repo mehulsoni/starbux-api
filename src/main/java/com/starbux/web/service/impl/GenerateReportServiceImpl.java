@@ -1,9 +1,12 @@
 package com.starbux.web.service.impl;
 
+import com.starbux.entity.MostUserProductToppingDto;
+import com.starbux.entity.OrderCart;
 import com.starbux.entity.OrderPerCustomerReportDto;
 import com.starbux.entity.User;
 import com.starbux.exception.ReportGenerationException;
 import com.starbux.web.mapper.IUserMapper;
+import com.starbux.web.repository.IOrderRepository;
 import com.starbux.web.repository.IUserRepository;
 import com.starbux.web.service.IGenerateReportService;
 
@@ -36,14 +39,23 @@ public class GenerateReportServiceImpl implements IGenerateReportService {
 	private IUserRepository userRepository;
 
 	@Autowired
+	private IOrderRepository orderRepository;
+
+	@Autowired
 	private IUserMapper userMapper;
 
 	@Override
 	public Optional<byte[]> reportOrderPerCustomer() {
+		List<OrderPerCustomerReportDto> perCustomerReportDtoList = getCartOrderForReporting();
+
+		return generate(perCustomerReportDtoList);
+	}
+
+	private Optional<byte[]> generate(List<OrderPerCustomerReportDto> data) {
 		final InputStream stream = this.getClass().getResourceAsStream("/report.jrxml");
 		try {
 			final JasperReport report = JasperCompileManager.compileReport(stream);
-			final JRBeanCollectionDataSource source = new JRBeanCollectionDataSource(getCartOrderForReporting());
+			final JRBeanCollectionDataSource source = new JRBeanCollectionDataSource(data);
 			final Map<String, Object> parameters = new HashMap<>();
 			parameters.put("createdBy", "starbux.com");
 			final JasperPrint print = JasperFillManager.fillReport(report, parameters, source);
@@ -59,6 +71,38 @@ public class GenerateReportServiceImpl implements IGenerateReportService {
 			Optional.empty();
 		}
 	}
+
+//	@Override
+//	public Optional<byte[]> reportMostUserTopping() {
+//
+//		List<MostUserProductToppingDto> data = getMostUserProductTopping();
+//
+//
+//		final InputStream stream = this.getClass().getResourceAsStream("/report.jrxml");
+//		try {
+//			final JasperReport report = JasperCompileManager.compileReport(stream);
+//			final JRBeanCollectionDataSource source = new JRBeanCollectionDataSource(data);
+//			final Map<String, Object> parameters = new HashMap<>();
+//			parameters.put("createdBy", "starbux.com");
+//			final JasperPrint print = JasperFillManager.fillReport(report, parameters, source);
+//			return Optional.ofNullable(JasperExportManager.exportReportToPdf(print));
+//		} catch (JRException e) {
+//			throw new ReportGenerationException("Exception while generating report", e);
+//		} finally {
+//			try {
+//				stream.close();
+//			} catch (IOException exception) {
+//				throw new ReportGenerationException("Exception while generating report", exception);
+//			}
+//			Optional.empty();
+//		}
+//	}
+//
+//	private List<MostUserProductToppingDto> getMostUserProductTopping() {
+//		List<OrderCart> orderCarts = orderRepository.findAll();
+//
+//		return null;
+//	}
 
 	private List<OrderPerCustomerReportDto> getCartOrderForReporting() {
 		List<User> users = userRepository.findAll();

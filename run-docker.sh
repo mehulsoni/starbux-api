@@ -1,0 +1,1 @@
+docker run --detach --publish=6005:6002 -e "SPRING_PROFILES_ACTIVE=LOCAL" --network=host -t springio/starbux:latest
