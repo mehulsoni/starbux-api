@@ -41,6 +41,87 @@ $ ./gradlew bootRun
 The REST API to the example app is described below.
 
 http://<ip-address>:6002/api/docs
+ 
+ Topping C/R/U/D
+ 
+Topping CRUD Operation
+
+
+GET
+​/v1​/topping​/{id}
+Get topping by id
+GET
+​/v1​/topping​/
+Get all toppings
+POST
+​/v1​/topping​/
+Create a new topping
+PATCH
+​/v1​/topping​/
+Update topping
+PATCH
+​/v1​/topping​/disable​/{id}
+Disable products
+PATCH
+​/v1​/topping​/enable​/{id}
+Enable products
+
+Product C/R/U/D
+
+Product CRUD Operation
+
+GET
+​/v1​/product​/{id}
+Get product by id
+GET
+​/v1​/product​/
+Get all products
+POST
+​/v1​/product​/
+Create a new product
+PATCH
+​/v1​/product​/
+Update product
+PATCH
+​/v1​/product​/disable​/{id}
+Disable products
+PATCH
+​/v1​/product​/enable​/{id}
+Enable products
+
+Order C/R/U/D
+
+Order CRUD Operation
+
+
+GET
+​/v1​/order​/{id}
+DELETE
+​/v1​/order​/cancel-order​/{id}
+PUT
+​/v1​/order​/product-order​/cart-id​/{cart-id}​/command​/{command}​/id​/{id}
+
+Command ADD or REMOVE
+If ADD -  id= product table primary id
+Else Remove - Id = product-order table primary key
+
+PUT
+​/v1​/order​/topping-order​/cart-id​/{cart-id}​/order-product-id​/{order-product-id}​/command​/{command}​/id​/{id}
+
+Command ADD or REMOVE
+If ADD -  id= topping table primary id
+Else Remove - Id = topping-order table primary key
+
+GET
+​/v1​/order​/confirm-order​/{id}
+POST
+​/v1​/order​/initiate-order
+Reporting
+Report Generation Operation
+
+
+GET
+​/v1​/report​/order-per-customer
 
 ## Docker Push Command 
 
