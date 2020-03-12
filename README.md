@@ -22,7 +22,15 @@ Gradle
 
 ## Run the app
 
-  `sh run-docker.sh`
+ To build the executable jar you can execute the following command:
+
+$ ./gradlew bootJar
+The executable jar is located in the build/libs directory and you can run it by executing the following command:
+
+$ java -jar build/libs/*.jar
+Another way to run the application is by executing the following Gradle command:
+
+$ ./gradlew bootRun
 
 ## Run the tests
 
