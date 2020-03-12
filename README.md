@@ -19,6 +19,10 @@ Postgres
 Docker
 Gradle
 
+## Username/password Basic Authentication Required
+
+User: "admin" 
+Password: "password"
 
 ## Run the app
 
