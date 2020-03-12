@@ -36,26 +36,26 @@ $ ./gradlew bootRun
 
     ./run-tests.sh
 
-# REST API
+## REST API
 
 The REST API to the example app is described below.
 
 http://<ip-address>:6002/api/docs
 
-# Docker Push Command 
+## Docker Push Command 
 
 Retrieve an authentication token and authenticate your Docker client to your registry.
 Use the AWS CLI:
-# aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 496412940659.dkr.ecr.eu-west-3.amazonaws.com/starbux
+## aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 496412940659.dkr.ecr.eu-west-3.amazonaws.com/starbux
 
 Note: If you receive an error using the AWS CLI, make sure that you have the latest version of the AWS CLI and Docker installed.
 Build your Docker image using the following command. For information on building a Docker file from scratch see the instructions here . You can skip this step if your image is already built:
-# docker build -t starbux .
+## docker build -t starbux .
 
 After the build completes, tag your image so you can push the image to this repository:
-# docker tag starbux:latest 496412940659.dkr.ecr.eu-west-3.amazonaws.com/starbux:latest
+## docker tag starbux:latest 496412940659.dkr.ecr.eu-west-3.amazonaws.com/starbux:latest
 
 Run the following command to push this image to your newly created AWS repository:
-# docker push 496412940659.dkr.ecr.eu-west-3.amazonaws.com/starbux:latest
+## docker push 496412940659.dkr.ecr.eu-west-3.amazonaws.com/starbux:latest
 
 
