@@ -2,7 +2,7 @@
 
 This is a starbux api Starbux providing a REST API to a Front end UI.
 
-The entire application is contained written in Java and using spring boot/ docker for running it into container
+The entire application is written in Java and using Java 11, spring boot and docker for running it into container and postgres as a backend database.
 
 `build-script.sh` and `run-test.sh` runs a simplistic test and generates the API
 documentation below.
